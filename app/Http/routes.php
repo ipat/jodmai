@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login', function() {
+  return "LOGIN";
+});
+
+Route::get('/home', array('as' => 'home', 'uses' => function(){
+  return view('home');
+}));
+
+Route::get('auth/facebook', 'Auth\AuthController@redirectToProvider');
+Route::get('auth/facebook/callback', 'Auth\AuthController@handleProviderCallback');

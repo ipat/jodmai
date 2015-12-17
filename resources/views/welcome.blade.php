@@ -18,7 +18,7 @@
                 display: table;
                 font-weight: 100;
                 font-family: 'Lato';
-                background-size:    cover;                      
+                background-size:    cover;
                 background-repeat:   no-repeat;
                 background-position: center center;
             }
@@ -78,8 +78,8 @@
 
         </style>
     </head>
-    <body background="http://localhost:8888/jodmai/resources/assets/images/nnn.jpg">
-    
+    <body background="http://localhost/jodmai/resources/assets/images/nnn.jpg">
+
         <div class="container">
             <div id="bg">
             <div id="search">
@@ -90,6 +90,7 @@
                 <li><a href="{{ url('/auth/login') }}">Login</a></li>
                 <li><a href="{{ url('/auth/register') }}">Register</a></li>
                 <br>
+                <a href="auth/facebook" class="btn btn-info" role="button">Login with Facebook</a>
                 <div class="body">jodmail.com power by 89degreeStudio</div>
             </div>
             </div>
