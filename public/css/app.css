@@ -1,6 +1,5 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Kanit:400,300&subset=thai,latin);
-
-html, body {
+html,
+body {
   font-family: 'Open Sans', 'Kanit', sans-serif;
 }
