@@ -95,7 +95,7 @@
         <div class="row">
           <div class="text-center col-sm-8 col-sm-offset-2">
             <h2>บริการของเรา</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+            <p>เราได้มีการบริการเกี่ยวกับการส่งจดหมายครบวงจร</p>
           </div>
         </div>
       </div>
@@ -103,10 +103,10 @@
         <div class="row">
           <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
             <div class="service-icon">
-              <i class="fa fa-flask"></i>
+              <i class="fa fa-envelope"></i>
             </div>
             <div class="service-info">
-              <h3>Brand Identity</h3>
+              <h3>ส่งจดหมายทั่วประเทศ</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
             </div>
           </div>

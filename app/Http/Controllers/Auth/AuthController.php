@@ -99,7 +99,7 @@ class AuthController extends Controller
         'name' => $facebookUser->name,
         'email' => $facebookUser->email,
         'facebook_id' => $facebookUser->id,
-        'avata' => $facebookUser->avatar
+        'avatar' => $facebookUser->avatar
       ]);
     }
 }
