@@ -22,4 +22,4 @@ Route::get('/login', function() {
 Route::get('auth/facebook', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/facebook/callback', 'Auth\AuthController@handleProviderCallback');
 
-Route::get('home', 'UserController@mainpage');
+Route::get('home', ['uses' => 'UserController@mainpage', 'as' => 'home']);

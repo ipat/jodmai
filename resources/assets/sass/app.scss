@@ -14,3 +14,30 @@ html, body {
   font-size: 1.8em;
   color: white;
 }
+
+// ================= Navbar ======================
+.navbar {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.brand {
+  width: 200px !important;
+  span {
+    font-size: 1.2em;
+  }
+}
+
+.logo {
+  border: none !important;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+
+  #avatar {
+    width: 60px;
+    height: auto;
+    border: none;
+  }
+}
+
+.pe-7s-mail .label {
+  color: #555 !important;
+}
