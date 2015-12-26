@@ -27,10 +27,11 @@ html, body, h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
+
 hr {
   border-top: 1px solid #BBB;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 5px;
 }
 
 // ================= Panel Config ==================
@@ -86,5 +87,28 @@ nav {
   transition: all 0.5s ease;
   &:hover{
     background-color: #DDD;
+  }
+}
+
+.main-manage {
+  padding-left:0;
+  padding-right:0;
+  height: 100px;
+  a {
+    text-decoration: none;
+    color: #555;
+    cursor: pointer;
+  }
+  .col {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-left: 1px solid #DDD;
+    height: 100px;
+    .icon {
+      font-size: 40px;
+    }
+    &:hover {
+      background-color: #F0F0F0;
+    }
   }
 }

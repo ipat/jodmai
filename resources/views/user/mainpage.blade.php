@@ -55,8 +55,19 @@
   </div>
 
   <div class="col-md-8">
-    <div class="card-panel">
-
+    <div class="card-panel main-manage row center-align nopad">
+      <a class="col s4 hoverable">
+        <i class="glyphicon glyphicon-envelope icon"></i> <br>
+        จดหมายใหม่
+      </a>
+      <a class="col s4 hoverable">
+        <i class="glyphicon glyphicon-share-alt icon"></i> <br>
+        ความคืบหน้า
+      </a>
+      <a class="col s4 hoverable">
+        <i class="glyphicon glyphicon-credit-card icon"></i> <br>
+        เติมเครดิต
+      </a>
     </div>
   </div>
 @endsection
