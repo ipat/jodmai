@@ -18,7 +18,7 @@
   <div class="col-md-4">
     <div class="row main-user-info">
       <div class="col-md-4">
-        <img src="{{Auth::user()->avatar}}" class="circle responsive-img z-depth-1" alt="" />
+        <div style="background-image:url({{Auth::user()->avatar}})" class="circle responsive-img z-depth-1 user-avatar"> </div>
       </div>
       <div class="col-md-8 left-align nopad valign-wrapper">
         <p class="valign">
