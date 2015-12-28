@@ -378,53 +378,53 @@
     <div class="container">
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-          <h2>Pricing Table</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+          <h2>โปรโมชั่นของเรา</h2>
+          <p>ท่านสามารถเลือกชำระเงินแบบรายครั้ง หรือ  แบบเหมาจ่ายได้ นอกจากนี้ยัง การชำระเงินโดยรหัสของขวัญอีกด้วย =]</p>
         </div>
       </div>
       <div class="pricing-table">
         <div class="row">
           <div class="col-sm-3">
             <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-              <h3>Basic</h3>
+              <h3>รายครั้ง</h3>
               <div class="price">
-                $9<span>/Month</span>
+                10<span>บาท</span>
               </div>
               <ul>
-                <li>Free Setup</li>
-                <li>10GB Storage</li>
-                <li>100GB Bandwith</li>
-                <li>5 Products</li>
+                <li>แสตมป์ 1 ดวง</li>
+                <li>ซองจดหมาย 1 ซอง</li>
+                <li>500 character</li>
+                <li></li>
               </ul>
               <a href="#" class="btn btn-lg btn-primary">Sign up</a>
             </div>
           </div>
           <div class="col-sm-3">
             <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
-              <h3>Standard</h3>
+              <h3>เหมาจ่าย 100</h3>
               <div class="price">
-                $19<span>/Month</span>
+                <span>บาท</span>
               </div>
               <ul>
-                <li>Free Setup</li>
-                <li>10GB Storage</li>
-                <li>100GB Bandwith</li>
-                <li>5 Products</li>
+                <li>แสตมป์ 11 ดวง</li>
+                <li>แลกการ์ดได้ 3 ดวงต่อ 1 ใบ</li>
+                <li>ซองจดหมาย 11 ซอง</li>
+                <li>500 character</li>
               </ul>
               <a href="#" class="btn btn-lg btn-primary">Sign up</a>
             </div>
           </div>
           <div class="col-sm-3">
             <div class="single-table featured wow flipInY" data-wow-duration="1000ms" data-wow-delay="800ms">
-              <h3>Featured</h3>
+              <h3>Speacial Code</h3>
               <div class="price">
-                $29<span>/Month</span>
+                30<span>บาท</span>
               </div>
               <ul>
-                <li>Free Setup</li>
-                <li>10GB Storage</li>
-                <li>100GB Bandwith</li>
-                <li>5 Products</li>
+                <li>การ์ดวันวาเลนไทน์ 1 ใบ</li>
+                <li>ซองจดหมาย 1 ซอง</li>
+                <li>แสตมป์ 1 ดวง</li>
+                <li>500 character</li>
               </ul>
               <a href="#" class="btn btn-lg btn-primary">Sign up</a>
             </div>
@@ -433,13 +433,13 @@
             <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">
               <h3>Professional</h3>
               <div class="price">
-                $49<span>/Month</span>
+                300<span>บาท</span>
               </div>
               <ul>
-                <li>Free Setup</li>
-                <li>10GB Storage</li>
-                <li>100GB Bandwith</li>
-                <li>5 Products</li>
+                <li>การ์ดวันวาเลนไทน์ 1 ใบ</li>
+                <li>ซองจดหมาย 33 ซอง</li>
+                <li>แสตมป์ 33 ดวง</li>
+                <li>500 character</li>
               </ul>
               <a href="#" class="btn btn-lg btn-primary">Sign up</a>
             </div>
