@@ -107,7 +107,7 @@
             </div>
             <div class="service-info">
               <h3>ส่งจดหมายทั่วประเทศ</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+              <p>บริการหลักของจดหมายคือ บริการส่งจดหมายที่รวดเร็ว มีคุณภาพ และ ง่ายดายเพียงแค่ปลายนิ้วของท่าน =]</p>
             </div>
           </div>
           <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="450ms">
@@ -116,7 +116,7 @@
             </div>
             <div class="service-info">
               <h3>Creative Idea</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+              <p>ไอเดียของจดหมาย เป็นทรัพย์สินทางปัญญาของ CEO และ CIO ของจดหมาย และ 89degree studio><"</p>
             </div>
           </div>
           <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="550ms">
@@ -124,8 +124,8 @@
               <i class="fa fa-cloud"></i>
             </div>
             <div class="service-info">
-              <h3>Awesome Support</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+              <h3>ระบบอยู่บนคลาวน์</h3>
+              <p>ข้อมูลทั้งหมดของผู้ใช้จะได้รับการบันทึกไว้ เพื่อความสะดวกของผู้ใช้งาน และแน่นอนว่าไม่รวมข้อมูลสำคัญของผู้ใช้งาน =]</p>
             </div>
           </div>
           <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="650ms">
@@ -133,8 +133,8 @@
               <i class="fa fa-coffee"></i>
             </div>
             <div class="service-info">
-              <h3>Professional Design</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+              <h3>การออกแบบที่สวยงาม</h3>
+              <p>การออกแบบของจดหมายนั้นสวยงาม แต่ยังคงไว้ซึ่งความเรียบง่ายเพื่อให้ผู้ใช้งานใช้งานได้อย่างมีประสิทธิภาพ</p>
             </div>
           </div>
           <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="750ms">
@@ -143,7 +143,7 @@
             </div>
             <div class="service-info">
               <h3>App Development</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+              <p>ในอนาคตเราจะมีแอพลิเคชั่นสำหรับ Smart Phone และ taplet อดใจรอหน่อยเนอะ มาเป็นกำลังใจให้พวกเราด้วยนะครับ</p>
             </div>
           </div>
           <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="850ms">
@@ -151,8 +151,8 @@
               <i class="fa fa-gift"></i>
             </div>
             <div class="service-info">
-              <h3>Clean Code</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+              <h3>บริการในอนาคต</h3>
+              <p>ในอนาคตจดหมายจะมีบริการส่งของขวัญให้คนที่สำคัญของคุณ และบริการอื่นๆอีกมากมาย มันต้องตื่นเต้นมากแน่ๆเลย :3</p>
             </div>
           </div>
         </div>
