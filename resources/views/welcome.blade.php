@@ -96,6 +96,8 @@
           <div class="text-center col-sm-8 col-sm-offset-2">
             <h2>บริการของเรา</h2>
             <p>เราได้มีการบริการเกี่ยวกับการส่งจดหมายครบวงจร</p>
+            <p>ทำไมเราถึงควรสงจดหมาย? นั่นก็เพราะมันมีคุณค่าทางจิตใจต่อผู้รับมากกว่าเสียงโนติฟิเคชั่นใน instant message และยังมีอีกหลายคนที่เข้าถึงได้ด้วยจดหมายเท่านั้น =]</p>
+            <p>ปัจจุบันคนเรามักสนใจโทรศัพท์มือถือเป็นส่วนมาก ทำให้เราตัดขาดจากโลกแห่งความเป็นจริง สิ่งสำคัญ ความรู้สึกต่างๆ ที่หาไม่ได้ในโลกดิจิตอล เด็กสมัยใหม่คงไม่เคยสัมพัสความรู้สึกตอนได้รับจดหมายเป็นแน่ เราจึงอยากนำจดหมายกลับมาอีกครั้งหนึ่ง ในรูปแบบที่ใช้งานง่ายกว่าเดิม โดยมีเราเป็นตัวเชื่อมระหว่างจดหมายกับโลกดิจิตอล =]</p>
           </div>
         </div>
       </div>
@@ -115,7 +117,7 @@
               <i class="fa fa-umbrella"></i>
             </div>
             <div class="service-info">
-              <h3>Creative Idea</h3>
+              <h3>แนวคิดของเรา</h3>
               <p>ไอเดียของจดหมาย เป็นทรัพย์สินทางปัญญาของ CEO และ CIO ของจดหมาย และ 89degree studio><"</p>
             </div>
           </div>
@@ -142,7 +144,7 @@
               <i class="fa fa-bitbucket"></i>
             </div>
             <div class="service-info">
-              <h3>App Development</h3>
+              <h3>การพัฒนาแอพลิเคชั่น</h3>
               <p>ในอนาคตเราจะมีแอพลิเคชั่นสำหรับ Smart Phone และ taplet อดใจรอหน่อยเนอะ มาเป็นกำลังใจให้พวกเราด้วยนะครับ</p>
             </div>
           </div>
@@ -393,7 +395,7 @@
               <ul>
                 <li>แสตมป์ 1 ดวง</li>
                 <li>ซองจดหมาย 1 ซอง</li>
-                <li>500 character</li>
+                <li>500 character 1 page</li>
                 <li></li>
               </ul>
               <a href="#" class="btn btn-lg btn-primary">Sign up</a>
@@ -409,7 +411,7 @@
                 <li>แสตมป์ 11 ดวง</li>
                 <li>แลกการ์ดได้ 3 ดวงต่อ 1 ใบ</li>
                 <li>ซองจดหมาย 11 ซอง</li>
-                <li>500 character</li>
+                <li>500 character 10 page</li>
               </ul>
               <a href="#" class="btn btn-lg btn-primary">Sign up</a>
             </div>
@@ -496,8 +498,8 @@
       <div class="container">
         <div class="row">
           <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <h2>Contact Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+            <h2>ติดต่อเรา</h2>
+            <p>ทุกปัญหาที่ประสบเราจะรีบช่วยเหลือและแก้ไขโดยเร็ว ทุกคำติชมของท่านเราจะนำไปปรับปรุงผลงานของเราให้ดียิ่งขึ้น ขอขอบคุณทุกกำลังใจที่มีให้นะครับ =]</p>
           </div>
         </div>
         <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -529,12 +531,12 @@
             </div>
             <div class="col-sm-6">
               <div class="contact-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                <p>เราเป็นนิสิตที่อยากทำสิ่งใหม่ๆ เริ่มเดินในเส้นทางใหม่ๆ ที่เป็นของตัวเอง เราไม่อาจทราบได้ว่าอนาคตจะเป็นเช่นไร แต่เราก็จะทำมันให้เต็มที่ ช่วยเป็นกำลังใจให้พวกเราด้วยนะครับ =]</p>
                 <ul class="address">
-                  <li><i class="fa fa-map-marker"></i> <span> Address:</span> 2400 South Avenue A </li>
-                  <li><i class="fa fa-phone"></i> <span> Phone:</span> +928 336 2000  </li>
-                  <li><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:someone@yoursite.com"> support@oxygen.com</a></li>
-                  <li><i class="fa fa-globe"></i> <span> Website:</span> <a href="#">www.sitename.com</a></li>
+                  <li><i class="fa fa-map-marker"></i> <span> Address:</span> 60/257 wangmai phatumwan bangkok praram1 road 10330 </li>
+                  <li><i class="fa fa-phone"></i> <span> Phone:</span> +6696 857 4515  </li>
+                  <li><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:someone@yoursite.com"> eighty9degree@hotmil.com</a></li>
+                  <li><i class="fa fa-globe"></i> <span> Website:</span> <a href="#">www.jodmai.com</a></li>
                 </ul>
               </div>
             </div>
