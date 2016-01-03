@@ -1,4 +1,4 @@
-@extends('user.layouts.master')
+@extends('layouts.master')
 
 @section('title', 'ยินดีต้อนรับสู่จดหมาย')
 
@@ -56,7 +56,7 @@
   <div class="col-md-8">
 
     <div class="card-panel main-manage row center-align nopad">
-      <a class="col s4 hoverable">
+      <a class="col s4 hoverable" href="{{url('mail/create')}}">
         <i class="glyphicon glyphicon-envelope icon"></i> <br>
         จดหมายใหม่
       </a>
