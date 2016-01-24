@@ -16,15 +16,15 @@ class MailTable extends Migration
         Schema::create('categories', function(Blueprint $table) {
           $table->increments('id');
           $table->string('name');
-          $table->string('description');
-          $table->string('picture');
+          $table->text('description');
+          $table->string('picture_url');
         });
 
         // Create Mail-Type Table
         Schema::create('mailtypes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('description');
+            $table->text('description');
             $table->string('picture_url');
             $table->string('price');
             $table->integer('category_id')->unsigned();
@@ -37,10 +37,10 @@ class MailTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('name');
-            $table->string('address_line_1');
-            $table->string('address_line_2');
-            $table->string('address_line_3');
-            $table->string('address_line_4');
+            $table->text('address_line_1');
+            $table->text('address_line_2');
+            $table->text('address_line_3');
+            $table->text('address_line_4');
             $table->string('postcode');
         });
 
@@ -52,7 +52,7 @@ class MailTable extends Migration
             $table->integer('mail_type_id')->unsigned();
             $table->foreign('mail_type_id')->references('id')->on('mailtypes');
             $table->string('mail_url');
-            $table->string('other');
+            $table->text('other');
             $table->integer('address_id')->unsigned();
             $table->foreign('address_id')->references('id')->on('addresses');
             $table->integer('status');
@@ -66,9 +66,9 @@ class MailTable extends Migration
      */
     public function down()
     {
-        Schema::drop('categories');
-        Schema::drop('mailtypes');
-        Schema::drop('addresses');
-        Schema::drop('mails');
+      Schema::drop('mails');
+      Schema::drop('addresses');
+      Schema::drop('mailtypes');
+      Schema::drop('categories');
     }
 }
