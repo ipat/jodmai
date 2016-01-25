@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use DB;
 
 class MailController extends Controller {
 
@@ -12,7 +13,14 @@ class MailController extends Controller {
      */
     public function create()
     {
-        return view('mail.createMail');
+        $mail_categories = DB::table('categories')->get();
+        return view('mail.createMail')->with('mail_categories', $mail_categories);
+    }
+
+    public function getMailTypes($id)
+    {
+        $mail_types = DB::table('mailtypes')->where('category_id', $id)->get();
+        return response()->json($mail_types);
     }
 
 }

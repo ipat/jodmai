@@ -13,6 +13,7 @@
     <script src="{{url('js/jquery-1.10.2.js')}}"></script>
     <!-- <script src="js/ct-navbar.js"></script> -->
     <script src="{{url('js/bootstrap.js')}}"></script>
+    <script src="{{url('js/velocity.min.js')}}"></script>
     <script src="{{url('js/materialize.min.js')}}"></script>
   </head>
   <body class="main-body">
