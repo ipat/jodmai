@@ -24,5 +24,9 @@ Route::get('auth/facebook/callback', 'Auth\AuthController@handleProviderCallback
 
 Route::get('home', ['uses' => 'UserController@mainpage', 'as' => 'home']);
 
+// All routes about mail
 Route::get('mail/create', ['uses' => 'MailController@create', 'as' => 'create-mail']);
-Route::get('mail/mailtypes/{id}', ['uses' => 'MailController@getMailTypes', 'as' => 'create-mail']);
+Route::get('mail/mailtypes/{id}', ['uses' => 'MailController@getMailTypes', 'as' => 'get-mail-types']);
+
+// All routes about user
+Route::get('user/addresses', ['uses' => 'UserController@getUserAddresses', 'as' => 'get-user-addresses']);

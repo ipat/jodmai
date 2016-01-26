@@ -148,6 +148,9 @@ nav {
   border: 1px solid rgba(0,0,0,0.2);
   transition: all 0.5 ease;
   cursor: pointer;
+  @media screen and (max-width: 650px) {
+    width: auto;
+  }
 
   .choice-img {
   }
@@ -167,12 +170,32 @@ nav {
 }
 
 // ============================= Spinner ==============================
+.loader {
+  background-color: rgba(0,0,0,0.7);
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  font-size: 1.5em;
+  padding-top: 35vh;
+  // padding: 50%;
+
+  .center-loader {
+    color: white;
+    text-align: center;
+    // padding-top:50%;
+  }
+}
 .spinner {
   width: 40px;
   height: 40px;
-  background-color: #555;
+  background-color: #EEE;
 
-  margin: 50px auto;
+  margin: 20px auto;
   -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
   animation: sk-rotateplane 1.2s infinite ease-in-out;
 }

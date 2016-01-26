@@ -23,4 +23,5 @@ class MailController extends Controller {
         return response()->json($mail_types);
     }
 
+
 }

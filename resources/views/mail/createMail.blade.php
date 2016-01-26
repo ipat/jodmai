@@ -55,6 +55,20 @@
       </div>
     </div>
 
+    <!-- ======== Select Address ======== -->
+    <div class="card row hoverable addresses-card" style="display:none;">
+      <div class="card-content">
+        <h5 class="no-margin-top">เลือกที่อยู่ที่ต้องการจัดส่ง</h5>
+        <p>เลือกที่อยู่ปลายทางของจดหมาย</p>
+        <div class="all-addresses">
+
+        </div>
+        <p>
+          <a class="waves-effect waves-light btn blue lighten-2" id="add-new-address"><i class="material-icons left">add</i> เพิ่มที่อยู่ใหม่</a>
+        </p>
+      </div>
+    </div>
+
     <!-- =================== Notification Cards =================== -->
     <!-- <h5>แจ้งเตือนของคุณ</h5>
 
@@ -79,10 +93,45 @@
 
     <!-- Loader -->
     <div class="loader" style="display:none;">
-      <div class="spinner">
+      <div class="center-loader">
+        <div class="spinner">
+        </div>
+        <p>กำลังดำเนินการ</p>
       </div>
     </div>
 
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="new-address-modal" class="modal">
+      <div class="modal-content">
+        <h5>เพิ่มที่อยู่ใหม่</h5>
+        <form class="new-address-form" method="post">
+          <div class="row">
+            <div class="input-field col s8">
+              <input placeholder="ใส่ชื่อผู้รับ" id="name" name="name" type="text" class="validate">
+              <label for="name">ชื่อผู้รับ</label>
+            </div>
+            <div class="input-field col s12">
+              <input placeholder="ที่อยู่บรรทัดที่ 1" id="address_line_1" name="address_line_1" type="text" class="validate">
+              <label for="name">ที่อยู่บรรทัดที่ 1</label>
+            </div>
+            <div class="input-field col s12">
+              <input placeholder="ที่อยู่บรรทัดที่ 2" id="address_line_2" name="address_line_2" type="text" class="validate">
+              <label for="name">ที่อยู่บรรทัดที่ 2</label>
+            </div>
+            <div class="input-field col s12">
+              <input placeholder="ที่อยู่บรรทัดที่ 3" id="address_line_3" name="address_line_3" type="text" class="validate">
+              <label for="name">ที่อยู่บรรทัดที่ 3</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="รหัสไปรษณีย์" id="postcode" name="postcode" type="text" class="validate">
+              <label for="name">รหัสไปรษณีย์</label>
+            </div>
+          </div>
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn">เพิ่มที่อยู่ใหม่</a>
+        </form>
+      </div>
   </div>
 
 
