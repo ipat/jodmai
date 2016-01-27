@@ -63,6 +63,7 @@
         <div class="all-addresses">
 
         </div>
+        <div class="clear"></div>
         <p>
           <a class="waves-effect waves-light btn blue lighten-2" id="add-new-address"><i class="material-icons left">add</i> เพิ่มที่อยู่ใหม่</a>
         </p>

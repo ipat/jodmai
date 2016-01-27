@@ -47,6 +47,10 @@ h6 {
   font-size: 1.2em;
 }
 
+.clear {
+  clear: both;
+}
+
 hr {
   border-top: 1px solid #BBB;
   margin-top: 0px;
@@ -168,6 +172,7 @@ nav a {
 .choice .choice-description,
 .address .choice-description {
   font-size: 0.8em;
+  height: 30px;
 }
 
 .address {
