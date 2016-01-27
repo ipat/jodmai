@@ -140,7 +140,8 @@ nav a {
   background-color: #F0F0F0;
 }
 
-.choice {
+.choice,
+.address {
   float: left;
   width: 25%;
   text-align: center;
@@ -153,20 +154,38 @@ nav a {
 }
 
 @media screen and (max-width: 650px) {
-  .choice {
+  .choice,
+  .address {
     width: auto;
   }
 }
 
-.choice .choice-header {
+.choice .choice-header,
+.address .choice-header {
   font-size: 1.2em;
 }
 
-.choice .choice-description {
+.choice .choice-description,
+.address .choice-description {
   font-size: 0.8em;
 }
 
-.choice.active {
+.address {
+  text-align: left;
+  width: 45%;
+}
+
+.address .address-address {
+  font-size: 0.8em;
+  text-align: left;
+}
+
+.address .address-postcode {
+  font-size: 1.1em;
+}
+
+.choice.active,
+.active.address {
   background-color: rgba(0, 0, 0, 0.05);
 }
 

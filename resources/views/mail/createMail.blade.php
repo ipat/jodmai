@@ -106,6 +106,7 @@
   <div id="new-address-modal" class="modal">
       <div class="modal-content">
         <h5>เพิ่มที่อยู่ใหม่</h5>
+        {!! Form::open(array('url'=>'user/address/create','method'=>'POST', 'id'=>'new-address-form')) !!}
         <form class="new-address-form" method="post">
           <div class="row">
             <div class="input-field col s8">
@@ -129,8 +130,8 @@
               <label for="name">รหัสไปรษณีย์</label>
             </div>
           </div>
-          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn">เพิ่มที่อยู่ใหม่</a>
-        </form>
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn" id="submit-new-address">เพิ่มที่อยู่ใหม่</a>
+        {!! Form::close() !!}
       </div>
   </div>
 

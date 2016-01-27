@@ -162,6 +162,25 @@ nav {
   .choice-description {
     font-size: 0.8em;
   }
+
+
+
+
+}
+
+.address {
+  @extend .choice;
+  text-align: left;
+  width: 45%;
+
+  .address-address {
+    font-size: 0.8em;
+    text-align: left;
+  }
+
+  .address-postcode {
+    font-size: 1.1em;
+  }
 }
 
 

@@ -29,4 +29,5 @@ Route::get('mail/create', ['uses' => 'MailController@create', 'as' => 'create-ma
 Route::get('mail/mailtypes/{id}', ['uses' => 'MailController@getMailTypes', 'as' => 'get-mail-types']);
 
 // All routes about user
-Route::get('user/addresses', ['uses' => 'UserController@getUserAddresses', 'as' => 'get-user-addresses']);
+Route::get('user/address', ['uses' => 'UserController@getUserAddresses', 'as' => 'get-user-addresses']);
+Route::post('user/address/create', ['uses' => 'UserController@postCreateUserAddress', 'as' => 'create-user-address']);
