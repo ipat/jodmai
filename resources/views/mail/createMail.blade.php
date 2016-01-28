@@ -70,6 +70,13 @@
       </div>
     </div>
 
+    <!-- ======== Submit Button ======== -->
+    <div class="row submit-panel" style="display:none;">
+      <p>
+        <a class="waves-effect waves-light btn blue lighten-2" id="next-page"><i class="material-icons left">add</i> ดำเนินการต่อ >></a>
+      </p>
+    </div>
+
     <!-- =================== Notification Cards =================== -->
     <!-- <h5>แจ้งเตือนของคุณ</h5>
 

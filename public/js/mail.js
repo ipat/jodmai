@@ -4,6 +4,7 @@ $(document).ready(function() {
     var id = $(this).data("catId");
     $(".mail-types-card").velocity("fadeOut", {duration: 200});
     $(".addresses-card").velocity("fadeOut", {duration: 200});
+    $(".submit-panel").velocity("fadeOut", {duration: 500});
     $(this).siblings().removeClass('active');
     $(this).addClass('active');
     openLoader();
@@ -46,6 +47,7 @@ $(document).ready(function() {
   };
 
   var loadAddress = function(){
+    $(".submit-panel").velocity("fadeOut", {duration: 500});
     $.ajax({
       url: "../user/address",
       dataType: 'json'
@@ -57,7 +59,7 @@ $(document).ready(function() {
       }
       $.each(data, function(i, address){
         console.log(address);
-        var content = '<div class="address mail-type-choice hoverable" data-type-id="' + address.id +'">' +
+        var content = '<div class="address hoverable" data-address-id="' + address.id +'">' +
                       '  <div class="address-header">' +
                       address.name +
                       '  </div>' +
@@ -76,7 +78,27 @@ $(document).ready(function() {
       closeLoader();
       $(".addresses-card").velocity("fadeIn", {duration: 800});
       $(".addresses-card").velocity("scroll", {duration: 500});
+      bindAddressClick();
     });
+  }
+
+  // Function to act when select mail type
+  var bindAddressClick = function(){
+    $(".address").click(function(){
+      $(this).siblings().removeClass('active');
+      $(this).addClass('active');
+      openLoader();
+      showSubmitBtn();
+    });
+  };
+
+  var showSubmitBtn = function(){
+    var typeId = $(".mail-type-choice.active").data('typeId');
+    var addId = $(".address.active").data('addressId');
+    $("#next-page").attr("href", "create/" + typeId + "/" + addId);
+    $(".submit-panel").velocity("fadeIn", {duration: 800});
+    $(".submit-panel").velocity("scroll", {duration: 500});
+    closeLoader();
   }
 
   // Call Add new address modal
