@@ -11,9 +11,9 @@
     <link href="{{url('css/app.css')}}" rel="stylesheet" />
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="{{url('js/jquery-1.10.2.js')}}"></script>
+    <script src="{{url('js/script.js')}}"></script>
     <!-- <script src="js/ct-navbar.js"></script> -->
     <script src="{{url('js/bootstrap.js')}}"></script>
-    <script src="{{url('js/velocity.min.js')}}"></script>
     <script src="{{url('js/materialize.min.js')}}"></script>
   </head>
   <body class="main-body">
@@ -40,6 +40,24 @@
     @show
 
     <div class="container main-container">
+      @if( session('error') )
+        <div class="card-panel red lighten2 msg-box">
+          {{session('error')}}
+          <div class="right">
+            X
+          </div>
+        </div>
+      @endif
+
+      @if( session('msg') )
+        <div class="card-panel green msg-box">
+          {{session('msg')}}
+          <div class="right">
+            X
+          </div>
+        </div>
+      @endif
+
       @yield('content')
     </div>
 

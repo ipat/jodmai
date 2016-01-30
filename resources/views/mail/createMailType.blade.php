@@ -61,6 +61,8 @@
         <h5 class="no-margin-top">เขียนจดหมาย</h5>
         <p>ทำการเขียนจดหมายของคุณ</p>
         {!! Form::open(array('method'=>'POST')) !!}
+          <input type="hidden" name="mail_type_id" value="{{$mailType->id}}">
+          <input type="hidden" name="address_id" value="{{$address->id}}">
           <textarea id="mailing" name="content">เขียนจดหมายของท่านที่นี่</textarea>
           <br>
           <button class="waves-effect waves-light btn blue lighten-2" id="next-page" type="submit"><i class="material-icons left">add</i> ดำเนินการต่อ >></button>
