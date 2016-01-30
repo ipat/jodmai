@@ -3,6 +3,7 @@
 use App\Http\Controllers\Controller;
 use DB;
 use Auth;
+use Request;
 use App\Address;
 
 class MailController extends Controller {
@@ -30,6 +31,11 @@ class MailController extends Controller {
           'mailType' => $mail_type
         );
         return view('mail.createMailType')->with($data);
+    }
+
+    public function handleCreateMailType()
+    {
+        return var_dump(Request::all());
     }
 
     public function getMailTypes($id)

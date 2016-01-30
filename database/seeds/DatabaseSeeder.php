@@ -36,6 +36,8 @@ class DatabaseSeeder extends Seeder
           'description' => 'จดหมายธุรกิจ',
           'picture_url' => 'mailtype/mailtype1.png',
           'price' => 10,
+          'width' => 500,
+          'height' => 700,
           'category_id' => DB::table('categories')->where('name', 'จดหมายทางการ')->first()->id
         ]);
         DB::table('mailtypes')->insert([
@@ -43,6 +45,8 @@ class DatabaseSeeder extends Seeder
           'description' => 'จดหมายเชิญ',
           'picture_url' => 'mailtype/mailtype2.png',
           'price' => 20,
+          'width' => 500,
+          'height' => 700,
           'category_id' => DB::table('categories')->where('name', 'จดหมายทางการ')->first()->id
         ]);
         //Insert Mail Catagories
@@ -51,6 +55,8 @@ class DatabaseSeeder extends Seeder
           'description' => 'จดหมายให้เพื่อน',
           'picture_url' => 'mailtype/mailtype1.png',
           'price' => 10,
+          'width' => 500,
+          'height' => 700,
           'category_id' => DB::table('categories')->where('name', 'จดหมายทั่วไป')->first()->id
         ]);
         DB::table('mailtypes')->insert([
@@ -58,6 +64,8 @@ class DatabaseSeeder extends Seeder
           'description' => 'จดหมายรัก',
           'picture_url' => 'mailtype/mailtype2.png',
           'price' => 20,
+          'width' => 500,
+          'height' => 700,
           'category_id' => DB::table('categories')->where('name', 'จดหมายทั่วไป')->first()->id
         ]);
 

@@ -29,6 +29,9 @@ class MailTable extends Migration
             $table->string('price');
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories');
+            $table->integer('width');
+            $table->integer('height');
+            $table->timestamps();
         });
 
         // Create Address Table
@@ -42,6 +45,7 @@ class MailTable extends Migration
             $table->text('address_line_3');
             $table->text('address_line_4');
             $table->string('postcode');
+            $table->timestamps();
         });
 
         // Create Mail Table
@@ -52,10 +56,12 @@ class MailTable extends Migration
             $table->integer('mail_type_id')->unsigned();
             $table->foreign('mail_type_id')->references('id')->on('mailtypes');
             $table->string('mail_url');
+            $table->text('content');
             $table->text('other');
             $table->integer('address_id')->unsigned();
             $table->foreign('address_id')->references('id')->on('addresses');
             $table->integer('status');
+            $table->timestamps();
         });
     }
 
