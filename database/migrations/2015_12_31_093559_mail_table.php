@@ -45,6 +45,8 @@ class MailTable extends Migration
             $table->text('address_line_3');
             $table->text('address_line_4');
             $table->string('postcode');
+            $table->boolean('is_sender')->default(false);
+            $table->boolean('is_primary')->default(false);
             $table->timestamps();
         });
 
@@ -58,12 +60,18 @@ class MailTable extends Migration
             $table->string('mail_url')->nullable();
             $table->text('content')->nullable();
             $table->text('other')->nullable();
-            $table->string('name');
-            $table->text('address_line_1');
-            $table->text('address_line_2');
-            $table->text('address_line_3');
-            $table->text('address_line_4');
-            $table->string('postcode');
+            $table->string('sender_name');
+            $table->text('sender_address_line_1');
+            $table->text('sender_address_line_2');
+            $table->text('sender_address_line_3');
+            $table->text('sender_address_line_4');
+            $table->string('sender_postcode');
+            $table->string('receiver_name')->nullable();
+            $table->text('receiver_address_line_1')->nullable();
+            $table->text('receiver_address_line_2')->nullable();
+            $table->text('receiver_address_line_3')->nullable();
+            $table->text('receiver_address_line_4')->nullable();
+            $table->string('receiver_postcode')->nullable();
             $table->integer('status');
             $table->timestamps();
         });

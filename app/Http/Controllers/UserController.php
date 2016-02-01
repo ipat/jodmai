@@ -24,7 +24,14 @@ class UserController extends Controller {
     public function getUserAddresses()
     {
         // $addresses = DB::table('addresses')->where('user_id', Auth::user()->id)->get();
-        $addresses = Address::all();
+        $addresses = Address::where("is_sender", false)->get();
+        return response()->json($addresses);
+    }
+
+    public function getSenderAddresses()
+    {
+        // $addresses = DB::table('addresses')->where('user_id', Auth::user()->id)->get();
+        $addresses = Address::where("is_sender", true)->get();
         return response()->json($addresses);
     }
 
@@ -39,6 +46,23 @@ class UserController extends Controller {
           $address->address_line_2 = $data['address_line_2'];
           $address->address_line_3 = $data['address_line_3'];
           $address->postcode = $data['postcode'];
+          $address->save();
+        }
+        return "OK";
+    }
+
+    public function postCreateSenderAddress()
+    {
+        $address = new Address;
+        if(Request::ajax()) {
+          $data = Input::all();
+          $address->user_id = Auth::user()->id;
+          $address->name = $data['name'];
+          $address->address_line_1 = $data['address_line_1'];
+          $address->address_line_2 = $data['address_line_2'];
+          $address->address_line_3 = $data['address_line_3'];
+          $address->postcode = $data['postcode'];
+          $address->is_sender = true;
           $address->save();
         }
         return "OK";

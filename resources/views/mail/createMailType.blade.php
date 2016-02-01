@@ -40,14 +40,29 @@
         <hr>
         <div class="row">
           <div class="col m2">
-            ที่อยู่ในการจัดส่ง
+            ที่อยู่ผู้รับ
           </div>
-          <div class="col m10">
-            <b>{{$address->name}}</b> <br>
-            {{$address->address_line_1}} <br>
-            {{$address->address_line_2}} <br>
-            {{$address->address_line_3}} <br>
-            {{$address->postcode}} <br>
+          <div class="col m4">
+            <b>{{$receiver_address->name}}</b> <br>
+            {{$receiver_address->address_line_1}} <br>
+            {{$receiver_address->address_line_2}} <br>
+            {{$receiver_address->address_line_3}} <br>
+            {{$receiver_address->postcode}} <br>
+          </div>
+
+          <div class="col m2">
+            ที่อยู่ผู้ส่ง
+          </div>
+          <div class="col m4">
+            @if ($sender_address != null)
+              <b>{{$sender_address->name}}</b> <br>
+              {{$sender_address->address_line_1}} <br>
+              {{$sender_address->address_line_2}} <br>
+              {{$sender_address->address_line_3}} <br>
+              {{$sender_address->postcode}} <br>
+            @else
+              <big>ไม่ระบุที่อยู่ผู้ส่ง</big>
+            @endif
           </div>
         </div>
         <a href="{{url('mail/create')}}" class=" modal-action modal-close waves-effect waves-white btn red lighten2" id="submit-new-address"><< กลับไปแก้ไข</a>
@@ -62,7 +77,8 @@
         <p>ทำการเขียนจดหมายของคุณ</p>
         {!! Form::open(array('method'=>'POST')) !!}
           <input type="hidden" name="mail_type_id" value="{{$mailType->id}}">
-          <input type="hidden" name="address_id" value="{{$address->id}}">
+          <input type="hidden" name="receiver_address_id" value="{{$receiver_address->id}}">
+          <input type="hidden" name="sender_address_id" value="{{($sender_address)? $sender_address->id: 0}}">
           <textarea id="mailing" name="content">เขียนจดหมายของท่านที่นี่</textarea>
           <br>
           <button class="waves-effect waves-light btn blue lighten-2" id="next-page" type="submit"><i class="material-icons left">add</i> ดำเนินการต่อ >></button>

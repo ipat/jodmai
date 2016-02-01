@@ -42,24 +42,24 @@ $(document).ready(function() {
       $(this).siblings().removeClass('active');
       $(this).addClass('active');
       openLoader();
-      loadAddress();
+      loadReceiverAddress();
     });
   };
 
-  var loadAddress = function(){
+  var loadReceiverAddress = function(){
     $(".submit-panel").velocity("fadeOut", {duration: 500});
     $.ajax({
       url: "../user/address",
       dataType: 'json'
     }).done(function(data) {
-      $(".all-addresses").empty();
+      $(".all-receiver-addresses").empty();
       console.log(data.length);
       if(data.length == 0) {
-        $(".all-addresses").append("<big><u>ยังไม่มีที่อยู่ที่เคยใช้</u></big>");
+        $(".all-receiver-addresses").append("<big><u>ยังไม่มีที่อยู่ที่เคยใช้</u></big>");
       }
       $.each(data, function(i, address){
         console.log(address);
-        var content = '<div class="address hoverable" data-address-id="' + address.id +'">' +
+        var content = '<div class="receiver-address address hoverable" data-address-id="' + address.id +'">' +
                       '  <div class="address-header">' +
                       address.name +
                       '  </div>' +
@@ -73,18 +73,73 @@ $(document).ready(function() {
                       '  </div>'
                       '  <br> ' +
                       '</div>';
-        $(".all-addresses").append(content);
+        $(".all-receiver-addresses").append(content);
       });
       closeLoader();
-      $(".addresses-card").velocity("fadeIn", {duration: 800});
-      $(".addresses-card").velocity("scroll", {duration: 500});
-      bindAddressClick();
+      $(".receiver-addresses-card").velocity("fadeIn", {duration: 800});
+      $(".receiver-addresses-card").velocity("scroll", {duration: 500});
+      bindReceiverAddressClick();
     });
   }
 
   // Function to act when select mail type
-  var bindAddressClick = function(){
-    $(".address").click(function(){
+  var bindReceiverAddressClick = function(){
+    $(".receiver-address").click(function(){
+      $(this).siblings().removeClass('active');
+      $(this).addClass('active');
+      openLoader();
+      loadSenderAddress();
+    });
+  };
+
+  var loadSenderAddress = function(){
+    $(".submit-panel").velocity("fadeOut", {duration: 500});
+    $.ajax({
+      url: "../user/sender-address",
+      dataType: 'json'
+    }).done(function(data) {
+      $(".all-sender-addresses").empty();
+      console.log(data.length);
+      var content = '<div class="sender-address address hoverable" data-address-id="0">' +
+                    '  <div class="address-header">' +
+                    ' <big>ไม่ต้องการระบุที่อยู่ผู้ส่ง</big> ' +
+                    '  </div>' +
+                    '  <br> ' +
+                    '</div>';
+
+      $(".all-sender-addresses").append(content);
+      //
+      // if(data.length == 0) {
+      //   $(".all-sender-addresses").append("<big><u>ยังไม่มีที่อยู่ที่เคยใช้</u></big>");
+      // }
+      $.each(data, function(i, address){
+        // console.log(address);
+        var content = '<div class="sender-address address hoverable" data-address-id="' + address.id +'">' +
+                      '  <div class="address-header">' +
+                      address.name +
+                      '  </div>' +
+                      '  <div class="address-address">' +
+                      address.address_line_1 + "<br>" +
+                      address.address_line_2 + "<br>" +
+                      address.address_line_3 + "<br>" +
+                      '  </div> ' +
+                      '  <div class="address-postcode">' +
+                      address.postcode + "<br>" +
+                      '  </div>'
+                      '  <br> ' +
+                      '</div>';
+        $(".all-sender-addresses").append(content);
+      });
+      closeLoader();
+      $(".sender-addresses-card").velocity("fadeIn", {duration: 800});
+      $(".sender-addresses-card").velocity("scroll", {duration: 500});
+      bindSenderAddressClick();
+    });
+  }
+
+  // Function to act when select mail type
+  var bindSenderAddressClick = function(){
+    $(".sender-address").click(function(){
       $(this).siblings().removeClass('active');
       $(this).addClass('active');
       openLoader();
@@ -92,31 +147,50 @@ $(document).ready(function() {
     });
   };
 
+
   var showSubmitBtn = function(){
     var typeId = $(".mail-type-choice.active").data('typeId');
-    var addId = $(".address.active").data('addressId');
-    $("#next-page").attr("href", "create/" + typeId + "/" + addId);
+    var recAddId = $(".receiver-address.active").data('addressId');
+    var sendAddId = $(".sender-address.active").data('addressId');
+    $("#next-page").attr("href", "create/" + typeId + "/" + recAddId + "/" + sendAddId);
     $(".submit-panel").velocity("fadeIn", {duration: 800});
     $(".submit-panel").velocity("scroll", {duration: 500});
     closeLoader();
   }
 
   // Call Add new address modal
-  $('#add-new-address').click(function(){
-    $('#new-address-modal').openModal();
+  $('#add-new-receiver-address').click(function(){
+    $('#new-receiver-address-modal').openModal();
+  });
+
+  // Call Add new address modal
+  $('#add-new-sender-address').click(function(){
+    $('#new-sender-address-modal').openModal();
   });
 
   // Add new address to DB
-  $('#submit-new-address').click(function(){
-    var submitAddress = $('#new-address-form').serialize();
+  $('#submit-new-receiver-address').click(function(){
+    var submitAddress = $('#new-receiver-address-form').serialize();
     openLoader();
     $.ajax({
       url: "../user/address/create",
       type: 'post',
       data: submitAddress
     }).done(function(data) {
-      loadAddress();
+      loadReceiverAddress();
+    });
+  });
 
+  // Add new address to DB
+  $('#submit-new-sender-address').click(function(){
+    var submitAddress = $('#new-sender-address-form').serialize();
+    openLoader();
+    $.ajax({
+      url: "../user/sender-address/create",
+      type: 'post',
+      data: submitAddress
+    }).done(function(data) {
+      loadSenderAddress();
     });
   });
 
