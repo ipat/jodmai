@@ -44,4 +44,9 @@ class UserController extends Controller {
         return "OK";
     }
 
+    public function addCredit()
+    {
+      return view('user.addCredit');
+    }
+
 }

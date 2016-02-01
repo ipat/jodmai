@@ -23,6 +23,7 @@ Route::get('auth/facebook', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/facebook/callback', 'Auth\AuthController@handleProviderCallback');
 
 Route::get('home', ['uses' => 'UserController@mainpage', 'as' => 'home']);
+Route::get('addCredit', ['uses' => 'UserController@addCredit', 'as' => 'add-credit']);
 
 // All routes about mail
 Route::get('mail/create', ['uses' => 'MailController@create', 'as' => 'create-mail']);
