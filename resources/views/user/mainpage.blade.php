@@ -3,7 +3,7 @@
 @section('title', 'ยินดีต้อนรับสู่จดหมาย')
 
 @section('content')
-  <!-- <div class="col-md-4">
+  <!-- <div class="col-sm-4">
     <div class="card-panel collection">
       <div class="collection-item center-align">
         <img src="{{Auth::user()->avatar}}" class="circle responsive-img z-depth-1" alt="" />
@@ -15,7 +15,7 @@
       </div>
     </div>
   </div> -->
-  <div class="col-md-4">
+  <div class="col-sm-4">
     <div class="row main-user-info">
       <div class="col-md-4">
         <div style="background-image:url({{Auth::user()->avatar}})" class="circle responsive-img z-depth-1 user-avatar"> </div>
@@ -53,7 +53,7 @@
 
   </div>
 
-  <div class="col-md-8">
+  <div class="col-sm-8">
 
     <div class="card-panel main-manage row center-align nopad">
       <a class="col s4 hoverable" href="{{url('mail/create')}}">
@@ -64,7 +64,7 @@
         <i class="glyphicon glyphicon-share-alt icon"></i> <br>
         ความคืบหน้า
       </a>
-      <a class="col s4 hoverable">
+      <a class="col s4 hoverable" href="{{url('addCredit')}}">
         <i class="glyphicon glyphicon-credit-card icon"></i> <br>
         เติมเครดิต
       </a>
@@ -93,10 +93,10 @@
     <div class="card row hoverable">
       <div class="card-content">
         <div class="row nomargin">
-          <div class="col-md-2 center-align">
+          <div class="col-sm-2 center-align">
             <i class="glyphicon glyphicon-send card-icon"></i>
           </div>
-          <div class="col-md-10">
+          <div class="col-sm-10">
             <p class="card-topic">กำลังจัดส่ง</p>
             I am a very simple card. I am good at containing small bits of information.
             I am convenient because I require little markup to use effectively.

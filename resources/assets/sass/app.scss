@@ -31,6 +31,10 @@ html, body, h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+.no-margin-top {
+  margin-top: 0;
+}
+
 .card-icon {
   font-size: 4em;
 }
@@ -39,11 +43,24 @@ html, body, h1, h2, h3, h4, h5, h6 {
   font-size: 1.2em;
 }
 
+.clear {
+  clear: both;
+}
+
 
 hr {
   border-top: 1px solid #BBB;
   margin-top: 0px;
   margin-bottom: 5px;
+}
+
+.msg-box {
+  color: white;
+  font-size: 1.2em;
+  .right {
+    border-radius: 2px;
+    cursor: pointer;
+  }
 }
 
 // ================= Panel Config ==================
@@ -130,5 +147,107 @@ nav {
     &:hover {
       background-color: #F0F0F0;
     }
+  }
+}
+
+// ================= Components ==========================
+.choice {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 15px;
+  margin: 10px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(0,0,0,0.2);
+  transition: all 0.5 ease;
+  cursor: pointer;
+  @media screen and (max-width: 650px) {
+    width: auto;
+  }
+
+  .choice-img {
+  }
+
+  .choice-header {
+    font-size: 1.2em;
+  }
+
+  .choice-description {
+    font-size: 0.8em;
+    height: 30px;
+  }
+
+
+
+
+}
+
+.address {
+  @extend .choice;
+  text-align: left;
+  width: 45%;
+
+  .address-address {
+    font-size: 0.8em;
+    text-align: left;
+  }
+
+  .address-postcode {
+    font-size: 1.1em;
+  }
+}
+
+
+.choice.active {
+  background-color: rgba(0,0,0,0.05);
+}
+
+// ============================= Spinner ==============================
+.loader {
+  background-color: rgba(0,0,0,0.7);
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  font-size: 1.5em;
+  padding-top: 35vh;
+  // padding: 50%;
+
+  .center-loader {
+    color: white;
+    text-align: center;
+    // padding-top:50%;
+  }
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #EEE;
+
+  margin: 20px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  } 50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  } 100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
 }
