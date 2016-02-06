@@ -177,7 +177,9 @@ class IndexController extends Controller {
         $User->credits = $current_point + 500;
       }
       $User->save();
-      
+      DB::table('transactions')->insert([
+        ['user_id' => Auth::user()->id, 'details' => $result->toJSON()]
+      ]);
       return Redirect::route('home')
       ->with('msg', 'เติม Point สำเร็จ');
     }
