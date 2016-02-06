@@ -77,27 +77,52 @@
            <tr>
              <td>30 point</td>
              <td>30 บาท</td>
-             <td><a href="#">เติมเครดิต</a></td>
+             <td>
+                {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
+                  <input type="hidden" name="type" value="1">
+                  <button type="submit" class="waves-effect waves-light btn" name="button">เติม Point</button>
+                {!! Form::close() !!}
+             </td>
            </tr>
            <tr>
              <td>50 point</td>
              <td>50 บาท</td>
-             <td><a href="#">เติมเครดิต</a></td>
+             <td>
+               {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
+                 <input type="hidden" name="type" value="2">
+                 <button type="submit" class="waves-effect waves-light btn" name="button">เติม Point</button>
+               {!! Form::close() !!}
+             </td>
            </tr>
            <tr>
              <td>100 point</td>
              <td>95 บาท</td>
-             <td><a href="#">เติมเครดิต</a></td>
+             <td>
+               {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
+                 <input type="hidden" name="type" value="3">
+                 <button type="submit" class="waves-effect waves-light btn" name="button">เติม Point</button>
+               {!! Form::close() !!}
+             </td>
            </tr>
            <tr>
              <td>200 point</td>
              <td>185 บาท</td>
-             <td><a href="#">เติมเครดิต</a></td>
+             <td>
+               {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
+                 <input type="hidden" name="type" value="4">
+                 <button type="submit" class="waves-effect waves-light btn" name="button">เติม Point</button>
+               {!! Form::close() !!}
+             </td>
            </tr>
            <tr>
              <td>500 point</td>
              <td>450 บาท</td>
-             <td><a href="#">เติมเครดิต</a></td>
+             <td>
+               {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
+                 <input type="hidden" name="type" value="5">
+                 <button type="submit" class="waves-effect waves-light btn" name="button">เติม Point</button>
+               {!! Form::close() !!}
+             </td>
            </tr>
          </tbody>
        </table>

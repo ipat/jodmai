@@ -31,6 +31,18 @@ Route::get('mail/create/{mailTypeId}/{receiverAddressId}/{senderAddressId}', ['u
 Route::post('mail/create/{mailTypeId}/{receiverAddressId}/{senderAddressId}', ['uses' => 'MailController@handleCreateMailType', 'as' => 'handle-create-mail-type']);
 Route::get('mail/mailtypes/{id}', ['uses' => 'MailController@getMailTypes', 'as' => 'get-mail-types']);
 
+// Payment Route
+Route::post('payment', array(
+    'as' => 'payment',
+    'uses' => 'IndexController@postPayment',
+));
+
+// this is after make the payment, PayPal redirect back to your site
+Route::get('payment/status', array(
+    'as' => 'payment.status',
+    'uses' => 'IndexController@getPaymentStatus',
+));
+
 // All routes about user
 Route::get('user/address', ['uses' => 'UserController@getUserAddresses', 'as' => 'get-user-addresses']);
 Route::get('user/sender-address', ['uses' => 'UserController@getSenderAddresses', 'as' => 'get-sender-addresses']);
