@@ -80,7 +80,7 @@
              <td>
                 {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
                   <input type="hidden" name="type" value="1">
-                  <button type="submit" class="waves-effect waves-light btn" name="button">เติม Point</button>
+                  <button type="submit" class="waves-effect waves-light btn" name="button">เติมเครดิต</button>
                 {!! Form::close() !!}
              </td>
            </tr>
@@ -90,7 +90,7 @@
              <td>
                {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
                  <input type="hidden" name="type" value="2">
-                 <button type="submit" class="waves-effect waves-light btn" name="button">เติม Point</button>
+                 <button type="submit" class="waves-effect waves-light btn" name="button">เติมเครดิต</button>
                {!! Form::close() !!}
              </td>
            </tr>
@@ -100,7 +100,7 @@
              <td>
                {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
                  <input type="hidden" name="type" value="3">
-                 <button type="submit" class="waves-effect waves-light btn" name="button">เติม Point</button>
+                 <button type="submit" class="waves-effect waves-light btn" name="button">เติมเครดิต</button>
                {!! Form::close() !!}
              </td>
            </tr>
@@ -110,7 +110,7 @@
              <td>
                {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
                  <input type="hidden" name="type" value="4">
-                 <button type="submit" class="waves-effect waves-light btn" name="button">เติม Point</button>
+                 <button type="submit" class="waves-effect waves-light btn" name="button">เติมเครดิต</button>
                {!! Form::close() !!}
              </td>
            </tr>
@@ -120,7 +120,7 @@
              <td>
                {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
                  <input type="hidden" name="type" value="5">
-                 <button type="submit" class="waves-effect waves-light btn" name="button">เติม Point</button>
+                 <button type="submit" class="waves-effect waves-light btn" name="button">เติมเครดิต</button>
                {!! Form::close() !!}
              </td>
            </tr>

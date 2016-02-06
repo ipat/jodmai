@@ -4,6 +4,8 @@ use App\Http\Controllers\Controller;
 use DB;
 use Auth;
 use Request;
+use App\User;
+use Redirect;
 use App\Address;
 use App\Mail;
 
@@ -24,6 +26,8 @@ class MailController extends Controller {
     public function createMailType($mailTypeId, $receiverAddressId, $senderAddressId)
     {
         $mail_type = DB::table('mailtypes')->where('id', $mailTypeId)->first();
+        if($mail_type->price > Auth::user()->credits)
+          return redirect('home')->with('error', 'เครดิตของคุณไม่เพียงพอ');
         $receiver_address = Address::where('id', $receiverAddressId)->first();
         if(!$receiver_address || $receiver_address->user_id != Auth::user()->id || !$mail_type)
           return redirect('home')->with("error", "มีบางอย่างผิดพลาด");
@@ -52,6 +56,10 @@ class MailController extends Controller {
         if(!$receiver_address || $receiver_address->user_id != Auth::user()->id)
           return redirect('home')->with("error", "มีบางอย่างผิดพลาด");
 
+        $mail_type = DB::table('mailtypes')->where('id', Request::get('mail_type_id'))->first();
+        if($mail_type->price > Auth::user()->credits)
+          return redirect('home')->with('error', 'เครดิตของคุณไม่เพียงพอ');
+
         $mail = new Mail;
         $mail->user_id = Auth::user()->id;
         $mail->mail_type_id = Request::get('mail_type_id');
@@ -75,7 +83,12 @@ class MailController extends Controller {
         }
 
         $mail->save();
-        return redirect('home')->with("msg", "บันทึกจดหมายของเท่านแล้ว");
+        $User = User::find(Auth::user()->id);
+        $User->credits -= $mail_type->price;
+        $User->save();
+
+
+        return redirect('home')->with("msg", "บันทึกจดหมายของท่านแล้ว");
 
     }
 

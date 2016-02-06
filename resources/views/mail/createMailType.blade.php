@@ -7,8 +7,8 @@
   <script>
     tinymce.init({
       selector: '#mailing',
-      plugins : 'advlist autolink link image lists charmap preview',
-      toolbar: "undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist | link image | fontselect fontsizeselect | forecolor backcolor",
+      plugins : 'advlist autolink link lists charmap preview placeholder',
+      toolbar: "undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist | link | fontselect fontsizeselect | forecolor backcolor",
       indentation : '20pt',
       // autoresize_min_height: {{$mailType->height}},
       // autoresize_max_height: {{$mailType->width}},
@@ -79,7 +79,7 @@
           <input type="hidden" name="mail_type_id" value="{{$mailType->id}}">
           <input type="hidden" name="receiver_address_id" value="{{$receiver_address->id}}">
           <input type="hidden" name="sender_address_id" value="{{($sender_address)? $sender_address->id: 0}}">
-          <textarea id="mailing" name="content">เขียนจดหมายของท่านที่นี่</textarea>
+          <textarea id="mailing" name="content" placeholder="เขียนจดหมายของท่านที่นี่"></textarea>
           <br>
           <button class="waves-effect waves-light btn blue lighten-2" id="next-page" type="submit"><i class="material-icons left">add</i> ดำเนินการต่อ >></button>
         {!! Form::close() !!}

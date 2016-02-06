@@ -61,7 +61,7 @@ class IndexController extends Controller {
       $item_price = 450;
     } else {
       return Redirect::route('home')
-      ->with('error', 'เกิดปัญหาในการเติม Point กรุณาลองใหม่อีกครั้ง');
+      ->with('error', 'เกิดปัญหาในการเติมเครดิตกรุณาลองใหม่อีกครั้ง');
     }
 
 
@@ -123,7 +123,7 @@ class IndexController extends Controller {
     }
 
     return Redirect::route('home')
-    ->with('error', 'เกิดปัญหาในการเติม Point กรุณาลองใหม่อีกครั้ง');
+    ->with('error', 'เกิดปัญหาในการเติมเครดิตกรุณาลองใหม่อีกครั้ง');
   }
 
   public function getPaymentStatus()
@@ -136,7 +136,7 @@ class IndexController extends Controller {
 
     if (empty(Input::get('PayerID')) || empty(Input::get('token'))) {
       return Redirect::route('home')
-      ->with('error', 'เติม Point ไม่สำเร็จ');
+      ->with('error', 'เติมเครดิตไม่สำเร็จ');
     }
 
     $payment = Payment::get($payment_id, $this->_api_context);
@@ -181,10 +181,10 @@ class IndexController extends Controller {
         ['user_id' => Auth::user()->id, 'details' => $result->toJSON()]
       ]);
       return Redirect::route('home')
-      ->with('msg', 'เติม Point สำเร็จ');
+      ->with('msg', 'เติมเครดิตสำเร็จ');
     }
     return Redirect::route('home')
-    ->with('error', 'เติม Point ไม่สำเร็จ');
+    ->with('error', 'เติมเครดิตไม่สำเร็จ');
   }
 
 
