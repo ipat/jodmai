@@ -75,17 +75,28 @@
       <div class="card-content">
         <h5 class="no-margin-top">เขียนจดหมาย</h5>
         <p>ทำการเขียนจดหมายของคุณ</p>
-        {!! Form::open(array('method'=>'POST')) !!}
+        {!! Form::open(array('method'=>'POST', 'id'=>'mail-form')) !!}
           <input type="hidden" name="mail_type_id" value="{{$mailType->id}}">
           <input type="hidden" name="receiver_address_id" value="{{$receiver_address->id}}">
           <input type="hidden" name="sender_address_id" value="{{($sender_address)? $sender_address->id: 0}}">
           <textarea id="mailing" name="content" placeholder="เขียนจดหมายของท่านที่นี่"></textarea>
           <br>
-          <button class="waves-effect waves-light btn blue lighten-2" id="next-page" type="submit"><i class="material-icons left">add</i> ดำเนินการต่อ >></button>
+          <button class="waves-effect waves-light btn blue lighten-2 modal-trigger" id="next-page" type="button" data-target="confirmModal"><i class="material-icons left">add</i> ดำเนินการต่อ >></button>
         {!! Form::close() !!}
       </div>
     </div>
 
+    <!-- Modal Structure -->
+    <div id="confirmModal" class="modal">
+      <div class="modal-content">
+        <h4>ยืนยันการบันทึก</h4>
+        <p>หากทำการยืนยันแล้วจะ <b>ไม่สามารถ</b> แก้ไขได้อีก ท่านต้องการยืนยันเลยหรือไม่</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn confirm-save">บันทึก</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn red lighten2">กลับไปแก้ไข</a>
+      </div>
+    </div>
 
 
 

@@ -67,6 +67,10 @@ hr {
   cursor: pointer;
 }
 
+.modal .btn {
+  margin: 6px 8px !important;
+}
+
 .panel-header {
   font-size: 1.4em;
   color: #555;

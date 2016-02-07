@@ -194,6 +194,12 @@ $(document).ready(function() {
     });
   });
 
+  $('.modal-trigger').leanModal();
+
+  $('.confirm-save').click(function(){
+    $('#mail-form').submit();
+  });
+
   // Utility functions
   var openLoader = function() {
     $(".loader").velocity("fadeIn", {duration: 400});
