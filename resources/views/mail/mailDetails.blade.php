@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'ยินดีต้อนรับสู่จดหมาย')
+@section('title', 'รายละเอียดจดหมาย - จดหมาย (Jodmai)')
 
 @section('content')
   <!-- <div class="col-sm-4">
@@ -16,41 +16,7 @@
     </div>
   </div> -->
   <div class="col-sm-4">
-    <div class="row main-user-info">
-      <div class="col-md-4">
-        <div style="background-image:url({{Auth::user()->avatar}})" class="circle responsive-img z-depth-1 user-avatar"> </div>
-      </div>
-      <div class="col-md-8 left-align nopad valign-wrapper">
-        <p class="valign">
-          <span class="username">คุณ {{Auth::user()->name}}</span>
-          <br>
-          คุณมีเครดิต {{Auth::user()->credits}} points
-        </p>
-      </div>
-    </div>
-
-    <div class="row side-menu">
-        <a href="#main-manage"><i class="glyphicon glyphicon-th-list"></i>  <span> การจัดการหลัก</span></a>
-    </div>
-
-    <div class="row side-menu">
-        <a href="#anounce"><i class="glyphicon glyphicon-bullhorn"></i>  <span> ประชาสัมพันธ์</span></a>
-    </div>
-
-    <div class="row side-menu">
-        <a href="#anounce"><i class="glyphicon glyphicon glyphicon-bell"></i>  <span> แจ้งเตือนของคุณ</span></a>
-    </div>
-
-    <hr style="margin-right: 2.2em;">
-
-    <div class="row side-menu">
-        <a href="#announce"><i class="glyphicon glyphicon glyphicon-user"></i>  <span> จัดการบัญชี</span></a>
-    </div>
-
-    <div class="row side-menu">
-        <a href="#anounce"><i class="glyphicon glyphicon-log-out"></i>  <span> ออกจากระบบ</span></a>
-    </div>
-
+    @include('layouts.sidebar')
   </div>
 
   <div class="col-sm-8">
@@ -60,7 +26,15 @@
 
     <div class="card row hoverable">
       <div class="card-content">
-        <h5>จดหมาย {{$mail_type->name}}</h5>
+        <h5>{{$mail_type->name}} -
+            <u>
+            @if ($mail->status == 0)
+              รอการดำเนินการ
+            @elseif ($mail->status == 1)
+              ทำการจัดส่งแล้ว
+            @endif
+          </u>
+        </h5>
           <div class="row">
             <div class="col m6">
               ที่อยู่ผู้รับ <b>{{$mail->receiver_name}}</b> <br>
