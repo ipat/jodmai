@@ -61,7 +61,7 @@
       </div>
     </div>
 
-    <a class="waves-effect waves-light btn red lighten-2" id="next-page" href="javascript:history.back()"><i class="material-icons left">fast_rewind</i> กลับ</a>
+    <a class="waves-effect waves-light btn red" id="next-page" href="javascript:history.back()"><i class="material-icons left">fast_rewind</i> กลับ</a>
 
 
 

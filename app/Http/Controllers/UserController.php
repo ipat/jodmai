@@ -76,4 +76,10 @@ class UserController extends Controller {
       return view('user.addCredit');
     }
 
+    public function yourMail()
+    {
+        $mails = Mail::where('user_id', Auth::user()->id)->orderBy('updated_at', 'DESC')->get();
+        return view('user.yourMail')->with('mails', $mails);
+    }
+
 }

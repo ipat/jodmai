@@ -24,6 +24,7 @@ Route::get('auth/facebook/callback', 'Auth\AuthController@handleProviderCallback
 
 Route::get('home', ['uses' => 'UserController@mainpage', 'as' => 'home']);
 Route::get('addCredit', ['uses' => 'UserController@addCredit', 'as' => 'add-credit']);
+Route::get('yourMail', ['uses' => 'UserController@yourMail', 'as' => 'your-mail']);
 
 // All routes about mail
 Route::get('mail/details/{id}', ['uses' => 'MailController@mailDetails', 'as' => 'mail-details']);

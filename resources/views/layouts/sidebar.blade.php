@@ -12,7 +12,7 @@
 </div>
 
 <div class="row side-menu">
-    <a href="#main-manage"><i class="glyphicon glyphicon-th-list"></i>  <span> การจัดการหลัก</span></a>
+    <a href="{{url('home')}}"><i class="glyphicon glyphicon-th-list"></i>  <span> หน้าหลัก</span></a>
 </div>
 
 <div class="row side-menu">
@@ -20,7 +20,7 @@
 </div>
 
 <div class="row side-menu">
-    <a href="#anounce"><i class="glyphicon glyphicon glyphicon-bell"></i>  <span> แจ้งเตือนของคุณ</span></a>
+    <a href="{{url('yourMail')}}"><i class="glyphicon glyphicon glyphicon-envelope"></i>  <span> จดหมายของคุณ</span></a>
 </div>
 
 <hr style="margin-right: 2.2em;">
