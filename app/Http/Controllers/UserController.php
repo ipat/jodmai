@@ -4,8 +4,10 @@ use App\Http\Controllers\Controller;
 use DB;
 use Auth;
 use Input;
+use App\Mail;
 use Request;
 use App\Address;
+use Carbon\Carbon;
 
 class UserController extends Controller {
 
@@ -17,7 +19,8 @@ class UserController extends Controller {
      */
     public function mainpage()
     {
-        return view('user.mainpage');
+        $recent_mails = Mail::where('user_id', Auth::user()->id)->where('updated_at', '>=', Carbon::now()->subWeek())->orderBy('updated_at', 'DESC')->get();
+        return view('user.mainpage')->with('recent_mails', $recent_mails);
     }
 
 

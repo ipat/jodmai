@@ -26,6 +26,7 @@ Route::get('home', ['uses' => 'UserController@mainpage', 'as' => 'home']);
 Route::get('addCredit', ['uses' => 'UserController@addCredit', 'as' => 'add-credit']);
 
 // All routes about mail
+Route::get('mail/details/{id}', ['uses' => 'MailController@mailDetails', 'as' => 'mail-details']);
 Route::get('mail/create', ['uses' => 'MailController@create', 'as' => 'create-mail']);
 Route::get('mail/create/{mailTypeId}/{receiverAddressId}/{senderAddressId}', ['uses' => 'MailController@createMailType', 'as' => 'create-mail-type']);
 Route::post('mail/create/{mailTypeId}/{receiverAddressId}/{senderAddressId}', ['uses' => 'MailController@handleCreateMailType', 'as' => 'handle-create-mail-type']);

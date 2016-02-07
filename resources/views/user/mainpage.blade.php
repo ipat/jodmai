@@ -90,24 +90,52 @@
     <!-- =================== Notification Cards =================== -->
     <h5>แจ้งเตือนของคุณ</h5>
 
-    <div class="card row hoverable">
-      <div class="card-content">
-        <div class="row nomargin">
-          <div class="col-sm-2 center-align">
-            <i class="glyphicon glyphicon-send card-icon"></i>
+    @foreach ($recent_mails as $mail)
+      <div class="card row hoverable">
+        <div class="card-content">
+          <div class="row nomargin">
+            <div class="col-sm-2 center-align">
+              <i class="glyphicon
+                @if ($mail->status == 0)
+                  glyphicon-transfer
+                @elseif ($mail->status == 1)
+                  glyphicon-send
+                @endif
+               card-icon"></i>
+            </div>
+            <div class="col-sm-10">
+              <p class="card-topic">
+                <big>
+                  @if ($mail->status == 0)
+                    รอการดำเนินการ
+                  @elseif ($mail->status == 1)
+                    ทำการจัดส่งแล้ว
+                  @endif
+                </big>
+                <br>
+                <small>
+                  @if ($mail->status == 0)
+                    บันทึกจดหมายเมื่อ {{$mail->created_at}}
+                  @elseif ($mail->status == 1)
+                    อัพเดตล่าสุดเมื่อ {{$mail->created_at}}
+                  @endif
+                </small>
+              </p>
+              <hr>
+              จดหมายจัดส่งถึง <b>{{$mail->receiver_name}}</b> <br>
+              {{$mail->receiver_address_line_1}} <br>
+              {{$mail->receiver_address_line_2}} <br>
+              {{$mail->receiver_address_line_3}} <br>
+              {{$mail->receiver_postcode}} <br>
+            </div>
           </div>
-          <div class="col-sm-10">
-            <p class="card-topic">กำลังจัดส่ง</p>
-            I am a very simple card. I am good at containing small bits of information.
-            I am convenient because I require little markup to use effectively.
-          </div>
-        </div>
 
+        </div>
+        <div class="card-action ">
+          <a href="{{url('mail/details')}}/{{$mail->id}}">ดูรายละเอียด</a>
+        </div>
       </div>
-      <div class="card-action ">
-        <a href="#">ดูรายละเอียด</a>
-      </div>
-    </div>
+    @endforeach
 
   </div>
 @endsection

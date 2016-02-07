@@ -98,5 +98,16 @@ class MailController extends Controller {
         return response()->json($mail_types);
     }
 
+    public function mailDetails($id)
+    {
+        $mail = Mail::find($id);
+        if($mail->user_id != Auth::user()->id) {
+          return redirect('home')->with("error", "เกิดข้อผิดพลาด");
+        } else {
+          $mail_type = DB::table('mailtypes')->where('id', $mail->mail_type_id)->first();
+          return view('mail.mailDetails')->with('mail_type', $mail_type)->with('mail', $mail);
+        }
+    }
+
 
 }
