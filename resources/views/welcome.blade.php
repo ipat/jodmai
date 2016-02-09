@@ -127,6 +127,10 @@
           <div class="col-md-4 col-md-offset-4 text-center">
             <a href="auth/facebook"><p class="facebook-button">เข้าสู่ระบบผ่าน Facebook</p></a>
           </div>
+          
+          <div class="col-md-4 col-md-offset-4 text-center">
+            <a href="auth/facebook"><p class="facebook-button">สมัครผ่าน Facebook</p></a>
+          </div>
         </div>
       </div>
     </div>
@@ -443,7 +447,7 @@
                 
                 <li></li>
               </ul>
-              <a href="#" class="btn btn-lg btn-primary">Sign up</a>
+              <a href="#login" class="btn btn-lg btn-primary">Sign up</a>
             </div>
           </div>
           <div class="col-sm-3">
@@ -456,7 +460,7 @@
                 <li>ได้ 20 point</li>
                
               </ul>
-              <a href="#" class="btn btn-lg btn-primary">Sign up</a>
+              <a href="#login" class="btn btn-lg btn-primary">Sign up</a>
             </div>
           </div>
           <div class="col-sm-3">
@@ -469,7 +473,7 @@
                 <li>ได้รับ 20 point</li>
                 
               </ul>
-              <a href="#" class="btn btn-lg btn-primary">Sign up</a>
+              <a href="#login" class="btn btn-lg btn-primary">Sign up</a>
             </div>
           </div>
           <div class="col-sm-3">
@@ -483,7 +487,7 @@
                 <li>ได้ 20 point</li>
                 <!-- <li>500 character</li> -->
               </ul>
-              <a href="#" class="btn btn-lg btn-primary">Sign up</a>
+              <a href="#login" class="btn btn-lg btn-primary">Sign up</a>
             </div>
           </div>
         </div>
