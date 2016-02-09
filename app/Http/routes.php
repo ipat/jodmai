@@ -33,6 +33,14 @@ Route::get('mail/create/{mailTypeId}/{receiverAddressId}/{senderAddressId}', ['u
 Route::post('mail/create/{mailTypeId}/{receiverAddressId}/{senderAddressId}', ['uses' => 'MailController@handleCreateMailType', 'as' => 'handle-create-mail-type']);
 Route::get('mail/mailtypes/{id}', ['uses' => 'MailController@getMailTypes', 'as' => 'get-mail-types']);
 
+
+Route::get('admin', ['uses' => 'AdminController@mainpage', 'as' => 'admin-home']);
+Route::get('admin/blog', ['uses' => 'AdminController@adminBlog', 'as' => 'admin-blog']);
+Route::get('admin/blog/edit/{id}', ['uses' => 'AdminController@editBlog', 'as' => 'edit-blog']);
+Route::post('admin/blog/edit/{id}', ['uses' => 'AdminController@handleEditBlog', 'as' => 'handle-edit-blog']);
+Route::get('admin/createBlog', ['uses' => 'AdminController@createBlog', 'as' => 'create-blog']);
+Route::post('admin/createBlog', ['uses' => 'AdminController@handleCreateBlog', 'as' => 'handle-create-blog']);
+
 // Payment Route
 Route::post('payment', array(
     'as' => 'payment',

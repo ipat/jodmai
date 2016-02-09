@@ -39,19 +39,20 @@
     <!-- =================== Announcement Cards =================== -->
     <h5>ประชาสัมพันธ์</h5>
 
-    <div class="card medium row hoverable">
-      <div class="card-image">
-        <img src="images/slider/1.jpg">
-        <span class="card-title">ประชาสัมพันธ์</span>
+    @foreach ($blogs as $blog)
+      <div class="card medium row hoverable">
+        <div class="card-image">
+          <img src="{{url($blog->cover_img)}}">
+          <span class="card-title">{{$blog->subject}}</span>
+        </div>
+        <div class="card-content">
+          <p>{{$blog->short_details}}</p>
+        </div>
+        <div class="card-action ">
+          <a href="{{url('admin/blog/edit/')}}/{{$blog->id}}">ดูรายละเอียด</a>
+        </div>
       </div>
-      <div class="card-content">
-        <p>I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively.</p>
-      </div>
-      <div class="card-action ">
-        <a href="#">ดูรายละเอียด</a>
-      </div>
-    </div>
+    @endforeach
 
     <!-- =================== Notification Cards =================== -->
     <h5>แจ้งเตือนของคุณ</h5>

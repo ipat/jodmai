@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTransactionsTable extends Migration
+class CreateBlogTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class CreateTransactionsTable extends Migration
     public function up()
     {
         //
-        Schema::create('transactions', function (Blueprint $table) {
+        Schema::create('blogs', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
+            $table->string('subject');
+            $table->string('cover_img');
             $table->text('details');
+            $table->text('short_details');
+            $table->boolean('show_on_timeline');
             $table->timestamps();
         });
     }
@@ -29,7 +33,7 @@ class CreateTransactionsTable extends Migration
     public function down()
     {
         //
-        Schema::drop('transactions');
+        Schema::drop('blogs');
 
     }
 }

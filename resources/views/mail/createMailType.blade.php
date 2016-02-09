@@ -81,7 +81,10 @@
           <input type="hidden" name="sender_address_id" value="{{($sender_address)? $sender_address->id: 0}}">
           <textarea id="mailing" name="content" placeholder="เขียนจดหมายของท่านที่นี่"></textarea>
           <br>
+          <label><u>หมายเหตุ</u> ทาง Jodmai ขอสงวนสิทธิในการปรับแต่งรูปแบบข้อความให้มีความเหมาะสมกับจดหมายที่ทำการส่ง</label>
+          <br>
           <button class="waves-effect waves-light btn blue lighten-2 modal-trigger" id="next-page" type="button" data-target="confirmModal"><i class="material-icons left">add</i> ดำเนินการต่อ >></button>
+
         {!! Form::close() !!}
       </div>
     </div>
