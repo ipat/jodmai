@@ -23,7 +23,7 @@
     <div class="card row hoverable">
       <div class="card-content">
         {!! Form::open(array('method'=>'POST', 'id'=>'mail-form')) !!}
-          <input type="hidden" name="name" value="{{$blog->created_at}}">
+          <input type="hidden" name="created_at" value="{{$blog->created_at}}">
           <div class="row">
             <input type="text" name="subject" value="{{$blog->subject}}" placeholder="หัวข้อ">
             <input type="text" name="cover_img" value="{{$blog->cover_img}}" placeholder="ที่อยู่ภาพ">

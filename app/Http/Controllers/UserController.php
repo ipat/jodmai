@@ -8,6 +8,7 @@ use App\Mail;
 use Request;
 use App\Address;
 use Carbon\Carbon;
+use App\User;
 
 class UserController extends Controller {
 
@@ -21,11 +22,12 @@ class UserController extends Controller {
     {
         $recent_mails = Mail::where('user_id', Auth::user()->id)->where('updated_at', '>=', Carbon::now()->subWeek())->orderBy('updated_at', 'DESC')->get();
         $blogs = DB::table('blogs')->where('show_on_timeline', 1)->get();
+        return view('user.mainpage')->with('blogs', $blogs)->with('recent_mails', $recent_mails);
     }
 
     public function blog()
     {
-        $blogs = DB::table('blogs')->orderBy('id', 'DESC')->get();
+        $blogs = DB::table('blogs')->orderBy('created_at', 'DESC')->get();
         return view('user.blog')->with('blogs', $blogs);
     }
 
@@ -33,6 +35,45 @@ class UserController extends Controller {
     {
         $blog = DB::table('blogs')->where('id', $id)->first();
         return view('user.blogDetails')->with('blog', $blog);
+    }
+
+    public function addCoupon()
+    {
+        return view('user.addCoupon');
+    }
+
+    public function handleAddCoupon()
+    {
+        $code = Request::get('code');
+        $coupon = DB::table('coupons')->where('code', $code)->first();
+        if($coupon == null) {
+          return redirect('home')->with('error', 'ไม่พบรหัสคูปอง');
+        } else {
+          if($coupon->amount <= $coupon->amount_used)
+            return redirect('home')->with('error', 'รหัสคูปองนี้ได้ใช้เต็มไปแล้ว');
+
+          $check_used = DB::table('used_coupon')->where('coupon_id', $coupon->id)->where('user_id', Auth::user()->id)->first();
+          if($check_used !== null) {
+            return redirect('home')->with('error', 'คุณได้ใช้รหัสผ่านนี้ไปแล้ว');
+          }
+
+          DB::table('coupons')->where('code', $code)->increment('amount_used', 1);
+          DB::table('used_coupon')->insert(
+            array(
+              'coupon_id' => $coupon->id,
+              'user_id' => Auth::user()->id,
+              'created_at' => Carbon::now()
+            )
+          );
+
+          $User = User::find(Auth::user()->id);
+
+          $User->credits = Auth::user()->credits + $coupon->freepoint;
+          $User->save();
+
+          return redirect('home')->with('msg', 'ใช้คูปองสำเร็จ');
+
+        }
     }
 
 

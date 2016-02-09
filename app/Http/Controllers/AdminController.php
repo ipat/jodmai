@@ -8,6 +8,7 @@ use App\Mail;
 use Request;
 use App\Address;
 use Carbon\Carbon;
+use App\User;
 
 class AdminController extends Controller {
 
@@ -30,7 +31,7 @@ class AdminController extends Controller {
 
     public function adminBlog()
     {
-        $blogs = DB::table('blogs')->orderBy('id', 'DESC')->get();
+        $blogs = DB::table('blogs')->orderBy('created_at', 'DESC')->get();
         return view('admin.adminblog')->with('blogs', $blogs);
     }
 
@@ -56,7 +57,7 @@ class AdminController extends Controller {
             'details' => $details,
             'cover_img' => $cover_img,
             'show_on_timeline' => $show_on_timeline,
-            'created_at' => time()
+            'created_at' => Carbon::now()
           ]
         ]);
 
@@ -79,6 +80,7 @@ class AdminController extends Controller {
         $details = Request::get('details');
         $cover_img = Request::get('cover_img');
         $show_on_timeline = (Request::get('show_on_timeline') == 'on')? 1: 0;
+        $created_at = Request::get('created_at');
 
         DB::table('blogs')->insert([
           [
@@ -87,7 +89,8 @@ class AdminController extends Controller {
             'short_details' => $short_details,
             'details' => $details,
             'cover_img' => $cover_img,
-            'show_on_timeline' => $show_on_timeline
+            'show_on_timeline' => $show_on_timeline,
+            'created_at' => $created_at
           ]
         ]);
 

@@ -16,17 +16,17 @@
 </div>
 
 <div class="row side-menu">
-    <a href="#anounce"><i class="glyphicon glyphicon-bullhorn"></i>  <span> ประชาสัมพันธ์</span></a>
+    <a href="{{url('blog')}}"><i class="glyphicon glyphicon-bullhorn"></i>  <span> ประชาสัมพันธ์</span></a>
 </div>
 
 <div class="row side-menu">
-    <a href="{{url('yourMail')}}"><i class="glyphicon glyphicon glyphicon-envelope"></i>  <span> จดหมายของคุณ</span></a>
+    <a href="{{url('yourMail')}}"><i class="glyphicon glyphicon-envelope"></i>  <span> จดหมายของคุณ</span></a>
 </div>
 
 <hr style="margin-right: 2.2em;">
 
 <div class="row side-menu">
-    <a href="#announce"><i class="glyphicon glyphicon glyphicon-user"></i>  <span> จัดการบัญชี</span></a>
+    <a href="{{url('addCoupon')}}"><i class="glyphicon glyphicon-hand-up"></i>  <span> ใส่รหัสคูปอง</span></a>
 </div>
 
 <div class="row side-menu">
