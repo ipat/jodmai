@@ -37,18 +37,24 @@
         </h5>
           <div class="row">
             <div class="col m6">
-              ที่อยู่ผู้รับ <b>{{$mail->receiver_name}}</b> <br>
+              ที่อยู่ผู้รับ <br>
+              <b>{{$mail->receiver_name}}</b> <br>
               {{$mail->receiver_address_line_1}} <br>
               {{$mail->receiver_address_line_2}} <br>
               {{$mail->receiver_address_line_3}} <br>
               {{$mail->receiver_postcode}} <br>
             </div>
             <div class="col m6">
-              ที่อยู่ผู้ส่ง <b>{{$mail->sender_name}}</b> <br>
-              {{$mail->sender_address_line_1}} <br>
-              {{$mail->sender_address_line_2}} <br>
-              {{$mail->sender_address_line_3}} <br>
-              {{$mail->sender_postcode}} <br>
+                ที่อยู่ผู้ส่ง <br>
+              @if($mail->sender_name == null)
+                <big>ไม่ระบุชื่อผู้ส่ง</big>
+              @else
+                <b>{{$mail->sender_name}}</b> <br>
+                {{$mail->sender_address_line_1}} <br>
+                {{$mail->sender_address_line_2}} <br>
+                {{$mail->sender_address_line_3}} <br>
+                {{$mail->sender_postcode}} <br>
+              @endif
             </div>
           </div>
           <hr>

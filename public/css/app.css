@@ -14,6 +14,22 @@ h6 {
   background-color: #eee;
 }
 
+body {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+main {
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
 .facebook-button {
   background-color: #3b5998;
   border-radius: 3px;
@@ -206,6 +222,18 @@ nav a {
 .choice.active,
 .active.address {
   background-color: rgba(0, 0, 0, 0.05);
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  color: white;
+}
+
+footer .footer-copy {
+  width: 50%;
+  margin-bottom: 20px;
 }
 
 .loader {
