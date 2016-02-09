@@ -55,7 +55,8 @@ class AdminController extends Controller {
             'short_details' => $short_details,
             'details' => $details,
             'cover_img' => $cover_img,
-            'show_on_timeline' => $show_on_timeline
+            'show_on_timeline' => $show_on_timeline,
+            'created_at' => time()
           ]
         ]);
 
@@ -91,6 +92,12 @@ class AdminController extends Controller {
         ]);
 
         return redirect('admin/blog')->with('msg', 'บันทึกบล็อกเรียบร้อย');
+    }
+
+    public function deleteBlog($id)
+    {
+        DB::table('blogs')->where('id', $id)->delete();
+        return redirect('admin/blog')->with('msg', 'ลบบล็อกแล้ว');
     }
 
 

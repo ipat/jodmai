@@ -49,7 +49,7 @@
           <p>{{$blog->short_details}}</p>
         </div>
         <div class="card-action ">
-          <a href="{{url('admin/blog/edit/')}}/{{$blog->id}}">ดูรายละเอียด</a>
+          <a href="{{url('blog/')}}/{{$blog->id}}">ดูรายละเอียด</a>
         </div>
       </div>
     @endforeach

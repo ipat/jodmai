@@ -20,10 +20,10 @@
 
     <!-- =================== Announcement Cards =================== -->
     <h5>แก้ไขบล็อก</h5>
-
     <div class="card row hoverable">
       <div class="card-content">
         {!! Form::open(array('method'=>'POST', 'id'=>'mail-form')) !!}
+          <input type="hidden" name="name" value="{{$blog->created_at}}">
           <div class="row">
             <input type="text" name="subject" value="{{$blog->subject}}" placeholder="หัวข้อ">
             <input type="text" name="cover_img" value="{{$blog->cover_img}}" placeholder="ที่อยู่ภาพ">
@@ -42,6 +42,9 @@
         {!! Form::close() !!}
       </div>
     </div>
+    {!! Form::open(array('method'=>'POST', 'id'=>'mail-form', 'url'=>'admin/blog/delete/' . $blog->id)) !!}
+      <button class="waves-effect waves-light btn red modal-trigger" id="next-page" type="submit">ลบบล็อกนี้ทิ้ง</button>
+    {!! Form::close() !!}
 
 
 

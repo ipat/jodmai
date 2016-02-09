@@ -21,7 +21,18 @@ class UserController extends Controller {
     {
         $recent_mails = Mail::where('user_id', Auth::user()->id)->where('updated_at', '>=', Carbon::now()->subWeek())->orderBy('updated_at', 'DESC')->get();
         $blogs = DB::table('blogs')->where('show_on_timeline', 1)->get();
-        return view('user.mainpage')->with('recent_mails', $recent_mails)->with('blogs', $blogs);
+    }
+
+    public function blog()
+    {
+        $blogs = DB::table('blogs')->orderBy('id', 'DESC')->get();
+        return view('user.blog')->with('blogs', $blogs);
+    }
+
+    public function blogDetails($id)
+    {
+        $blog = DB::table('blogs')->where('id', $id)->first();
+        return view('user.blogDetails')->with('blog', $blog);
     }
 
 

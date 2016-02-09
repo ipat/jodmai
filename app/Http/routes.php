@@ -23,6 +23,8 @@ Route::get('auth/facebook', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/facebook/callback', 'Auth\AuthController@handleProviderCallback');
 
 Route::get('home', ['uses' => 'UserController@mainpage', 'as' => 'home']);
+Route::get('blog', ['uses' => 'UserController@blog', 'as' => 'blog']);
+Route::get('blog/{id}', ['uses' => 'UserController@blogDetails', 'as' => 'blog-details']);
 Route::get('addCredit', ['uses' => 'UserController@addCredit', 'as' => 'add-credit']);
 Route::get('yourMail', ['uses' => 'UserController@yourMail', 'as' => 'your-mail']);
 
@@ -38,6 +40,7 @@ Route::get('admin', ['uses' => 'AdminController@mainpage', 'as' => 'admin-home']
 Route::get('admin/blog', ['uses' => 'AdminController@adminBlog', 'as' => 'admin-blog']);
 Route::get('admin/blog/edit/{id}', ['uses' => 'AdminController@editBlog', 'as' => 'edit-blog']);
 Route::post('admin/blog/edit/{id}', ['uses' => 'AdminController@handleEditBlog', 'as' => 'handle-edit-blog']);
+Route::post('admin/blog/delete/{id}', ['uses' => 'AdminController@deleteBlog', 'as' => 'delete-blog']);
 Route::get('admin/createBlog', ['uses' => 'AdminController@createBlog', 'as' => 'create-blog']);
 Route::post('admin/createBlog', ['uses' => 'AdminController@handleCreateBlog', 'as' => 'handle-create-blog']);
 
