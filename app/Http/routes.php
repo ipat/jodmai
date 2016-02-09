@@ -46,6 +46,10 @@ Route::post('admin/blog/edit/{id}', ['uses' => 'AdminController@handleEditBlog',
 Route::post('admin/blog/delete/{id}', ['uses' => 'AdminController@deleteBlog', 'as' => 'delete-blog']);
 Route::get('admin/createBlog', ['uses' => 'AdminController@createBlog', 'as' => 'create-blog']);
 Route::post('admin/createBlog', ['uses' => 'AdminController@handleCreateBlog', 'as' => 'handle-create-blog']);
+Route::get('admin/mails', ['uses' => 'AdminController@adminMails', 'as' => 'admin-mails']);
+Route::get('admin/mails/{status}', ['uses' => 'AdminController@adminMailsByStatus', 'as' => 'admin-mails']);
+Route::get('admin/mails/edit/{id}', ['uses' => 'AdminController@adminEditMailStatus', 'as' => 'admin-edit-mail']);
+Route::post('admin/mails/edit/{id}', ['uses' => 'AdminController@handleAdminEditMailStatus', 'as' => 'handle-admin-edit-mail']);
 
 // Payment Route
 Route::post('payment', array(

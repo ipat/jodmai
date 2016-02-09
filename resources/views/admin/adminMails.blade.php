@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'ยินดีต้อนรับสู่จดหมาย')
+@section('title', 'จดหมาย (Jodmai)')
 
 @section('content')
   <!-- <div class="col-sm-4">
@@ -21,47 +21,39 @@
 
   <div class="col-sm-8">
 
+    <!-- =================== Announcement Cards =================== -->
     <div class="card-panel main-manage row center-align nopad">
-      <a class="col s4 hoverable" href="{{url('mail/create')}}">
-        <i class="glyphicon glyphicon-plus icon"></i> <br>
-        จดหมายใหม่
-      </a>
-      <a class="col s4 hoverable" href="{{url('yourMail')}}">
+      <a class="col s3 hoverable" href="{{url('admin/mails')}}">
         <i class="glyphicon glyphicon-envelope icon"></i> <br>
-        จดหมายของคุณ
+        ทุกสถานะ
       </a>
-      <a class="col s4 hoverable" href="{{url('addCredit')}}">
-        <i class="glyphicon glyphicon-credit-card icon"></i> <br>
-        เติมเครดิต
+      <a class="col s3 hoverable" href="{{url('admin/mails/0')}}">
+        <i class="glyphicon glyphicon-transfer icon"></i> <br>
+        รอการดำเนินการ
+      </a>
+      <a class="col s3 hoverable" href="{{url('admin/mails/1')}}">
+        <i class="glyphicon glyphicon-time icon"></i> <br>
+        รอการจัดส่ง
+      </a>
+      </a>
+      <a class="col s3 hoverable" href="{{url('admin/mails/2')}}">
+        <i class="glyphicon glyphicon-send icon"></i> <br>
+        ทำการจัดส่งแล้ว
       </a>
     </div>
 
-    <!-- =================== Announcement Cards =================== -->
-    @if(count($blogs) != 0)
-      <h5>ประชาสัมพันธ์</h5>
-    @endif
-
-    @foreach ($blogs as $blog)
-      <div class="card medium row hoverable">
-        <div class="card-image">
-          <img src="{{url($blog->cover_img)}}">
-          <span class="card-title">{{$blog->subject}}</span>
-        </div>
-        <div class="card-content">
-          <p>{{$blog->short_details}}</p>
-        </div>
-        <div class="card-action ">
-          <a href="{{url('blog/')}}/{{$blog->id}}">ดูรายละเอียด</a>
-        </div>
-      </div>
-    @endforeach
-
-    <!-- =================== Notification Cards =================== -->
-    @if(count($recent_mails) != 0)
-      <h5>แจ้งเตือนของคุณ</h5>
-    @endif
-
-    @foreach ($recent_mails as $mail)
+    <h5>จดหมาย -
+      @if (!isset($status))
+        ทุกสถานะ
+      @elseif ($status == 0)
+        รอการดำเนินการ
+      @elseif ($status == 1)
+        รอการจัดส่ง
+      @elseif ($status == 2)
+        ทำการจัดส่งแล้ว
+      @endif
+    </h5>
+    @foreach ($mails as $mail)
       <div class="card row hoverable">
         <div class="card-content">
           <div class="row nomargin">
@@ -107,10 +99,11 @@
 
         </div>
         <div class="card-action ">
-          <a href="{{url('mail/details')}}/{{$mail->id}}">ดูรายละเอียด</a>
+          <a href="{{url('admin/mails/edit')}}/{{$mail->id}}">ดูรายละเอียด</a>
         </div>
       </div>
     @endforeach
+
 
   </div>
 @endsection
