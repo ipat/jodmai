@@ -21,6 +21,7 @@ class AdminController extends Controller {
    public function __construct()
    {
        $this->middleware('admin');
+       $this->middleware('auth');
    }
 
     public function mainpage()
@@ -102,6 +103,37 @@ class AdminController extends Controller {
         DB::table('blogs')->where('id', $id)->delete();
         return redirect('admin/blog')->with('msg', 'ลบบล็อกแล้ว');
     }
+
+    public function adminMails()
+    {
+        $mails = Mail::orderBy('updated_at', 'DESC')->get();
+        return view('admin.adminMails')->with('mails', $mails);
+    }
+
+    public function adminMailsByStatus($status)
+    {
+        $mails = Mail::where('status', $status)->orderBy('updated_at', 'DESC')->get();
+        return view('admin.adminMails')->with('mails', $mails)->with('status', $status);
+    }
+
+    public function adminEditMailStatus($id)
+    {
+        $mail = Mail::find($id);
+        $mail_type = DB::table('mailtypes')->where('id', $mail->mail_type_id)->first();
+
+        return view('admin.editMailStatus')->with('mail', $mail)->with('mail_type', $mail_type);
+    }
+
+    public function handleAdminEditMailStatus($id)
+    {
+        $mail = Mail::find($id);
+        $status = Request::get('status');
+        $mail->status = $status;
+        $mail->save();
+
+        return redirect('admin/mails')->with('msg', 'เปลี่ยนสถานะเรียบร้อย');
+    }
+
 
 
 }

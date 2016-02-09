@@ -26,7 +26,7 @@
 
     <div class="card row hoverable">
       <div class="card-content">
-        <h5>{{$mail_type->name}} -
+        <h5><b>{{$mail->id}}</b> | {{$mail_type->name}} -
             <u>
               @if ($mail->status == 0)
                 รอการดำเนินการ
@@ -65,6 +65,24 @@
             <p class="panel">
               {!!html_entity_decode($mail->content)!!}
             </p>
+          </div>
+          <div class="">
+            {!! Form::open(array('method'=>'POST', 'id'=>'mail-form')) !!}
+                <h5>เปลี่ยนสถานะ</h5>
+                <p>
+                  <input class="with-gap" name="status" type="radio" id="status0" value='0' {{($mail->status == 0)? 'checked':''}} />
+                  <label for="status0">รอการดำเนินการ</label>
+                </p>
+                <p>
+                  <input class="with-gap" name="status" type="radio" id="status1" value='1' {{($mail->status == 1)? 'checked':''}}/>
+                  <label for="status1">รอการจัดส่ง</label>
+                </p>
+                <p>
+                  <input class="with-gap" name="status" type="radio" id="status2" value="2" {{($mail->status == 2)? 'checked':''}}/>
+                  <label for="status2">ทำการจัดส่งแล้ว</label>
+                </p>
+                <button class="waves-effect waves-light btn blue lighten-2 modal-trigger" id="next-page" type="submit">ยืนยันการเปลี่ยนสถานะ</button>
+            {!! Form::close() !!}
           </div>
       </div>
     </div>

@@ -22,17 +22,13 @@
   <div class="col-sm-8">
 
     <div class="card-panel main-manage row center-align nopad">
-      <a class="col s4 hoverable" href="{{url('admin/blog')}}">
+      <a class="col s6 hoverable" href="{{url('admin/blog')}}">
         <i class="glyphicon glyphicon-plus icon"></i> <br>
         จัดการบล็อก
       </a>
-      <a class="col s4 hoverable" href="{{url('yourMail')}}">
+      <a class="col s6 hoverable" href="{{url('yourMail')}}">
         <i class="glyphicon glyphicon-envelope icon"></i> <br>
-        จดหมายของคุณ
-      </a>
-      <a class="col s4 hoverable" href="{{url('addCredit')}}">
-        <i class="glyphicon glyphicon-credit-card icon"></i> <br>
-        เติมเครดิต
+        จัดการจดหมาย
       </a>
     </div>
 

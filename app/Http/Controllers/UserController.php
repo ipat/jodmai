@@ -12,6 +12,11 @@ use App\User;
 
 class UserController extends Controller {
 
+    public function __construct()
+    {
+       $this->middleware('auth');
+    }
+
     /**
      * Show the profile for the given user.
      *

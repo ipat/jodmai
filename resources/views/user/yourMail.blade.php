@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'เติมเครดิต - จดหมาย (Jodmai)')
+@section('title', 'จดหมายของคุณ - จดหมาย (Jodmai)')
 
 @section('content')
   <!-- <div class="col-sm-4">
@@ -59,7 +59,7 @@
                 <small>
                   @if ($mail->status == 0)
                     บันทึกจดหมายเมื่อ {{$mail->created_at}}
-                  @elseif ($mail->status == 1)
+                  @else
                     อัพเดตล่าสุดเมื่อ {{$mail->created_at}}
                   @endif
                 </small>
