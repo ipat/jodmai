@@ -23,7 +23,7 @@
         <li class="divider"></li>
         <!-- <li><a href="#!">two</a></li> -->
         <!-- <li class="divider"></li> -->
-        <li><a href="#!">ออกจากระบบ</a></li>
+        <li><a href="{{url('logout')}}">ออกจากระบบ</a></li>
       </ul>
       <nav class="blue lighten-2 navbar-fixed">
         <div class="nav-wrapper container">
@@ -62,4 +62,16 @@
     </div>
 
   </body>
+  <footer class="page-footer blue lighten-1">
+    <div class="footer-copy left">
+      <div class="container">
+      © 2016 Copyright Jod-mai.com
+      </div>
+    </div>
+    <div class="footer-copy text-right right">
+      <div class="container">
+      สิทธิ์การใช้งาน
+      </div>
+    </div>
+  </footer>
 </html>

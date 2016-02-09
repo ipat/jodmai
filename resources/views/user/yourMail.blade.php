@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'ยินดีต้อนรับสู่จดหมาย')
+@section('title', 'เติมเครดิต - จดหมาย (Jodmai)')
 
 @section('content')
   <!-- <div class="col-sm-4">
@@ -21,47 +21,15 @@
 
   <div class="col-sm-8">
 
-    <div class="card-panel main-manage row center-align nopad">
-      <a class="col s4 hoverable" href="{{url('mail/create')}}">
-        <i class="glyphicon glyphicon-plus icon"></i> <br>
-        จดหมายใหม่
-      </a>
-      <a class="col s4 hoverable" href="{{url('yourMail')}}">
-        <i class="glyphicon glyphicon-envelope icon"></i> <br>
-        จดหมายของคุณ
-      </a>
-      <a class="col s4 hoverable" href="{{url('addCredit')}}">
-        <i class="glyphicon glyphicon-credit-card icon"></i> <br>
-        เติมเครดิต
-      </a>
-    </div>
-
     <!-- =================== Announcement Cards =================== -->
-    @if(count($blogs) != 0)
-      <h5>ประชาสัมพันธ์</h5>
+    <h5>จดหมายของคุณ</h5>
+    @if(count($mails) == 0)
+      <p>
+        ว่างเปล่า! สร้างจดหมายใหม่ของคุณสิ <br>
+        <a href="{{url('mail/create')}}" class="btn blue lighten-2">สร้างจดหมายใหม่</a>
+      </p>
     @endif
-
-    @foreach ($blogs as $blog)
-      <div class="card medium row hoverable">
-        <div class="card-image">
-          <img src="{{url($blog->cover_img)}}">
-          <span class="card-title">{{$blog->subject}}</span>
-        </div>
-        <div class="card-content">
-          <p>{{$blog->short_details}}</p>
-        </div>
-        <div class="card-action ">
-          <a href="{{url('blog/')}}/{{$blog->id}}">ดูรายละเอียด</a>
-        </div>
-      </div>
-    @endforeach
-
-    <!-- =================== Notification Cards =================== -->
-    @if(count($recent_mails) != 0)
-      <h5>แจ้งเตือนของคุณ</h5>
-    @endif
-
-    @foreach ($recent_mails as $mail)
+    @foreach ($mails as $mail)
       <div class="card row hoverable">
         <div class="card-content">
           <div class="row nomargin">
@@ -111,6 +79,7 @@
         </div>
       </div>
     @endforeach
+
 
   </div>
 @endsection

@@ -55,20 +55,36 @@
       </div>
     </div>
 
-    <!-- ======== Select Address ======== -->
-    <div class="card row hoverable addresses-card" style="display:none;">
+    <!-- ======== Select Receiver Address ======== -->
+    <div class="card row hoverable receiver-addresses-card" style="display:none;">
       <div class="card-content">
-        <h5 class="no-margin-top">เลือกที่อยู่ที่ต้องการจัดส่ง</h5>
-        <p>เลือกที่อยู่ปลายทางของจดหมาย</p>
-        <div class="all-addresses">
+        <h5 class="no-margin-top">เลือกที่อยู่ <b>ผู้รับ</b></h5>
+        <!-- <p>เลือกที่อยู่ <b>ผู้รับ</b> ของจดหมาย</p> -->
+        <div class="all-receiver-addresses">
 
         </div>
         <div class="clear"></div>
         <p>
-          <a class="waves-effect waves-light btn blue lighten-2" id="add-new-address"><i class="material-icons left">add</i> เพิ่มที่อยู่ใหม่</a>
+          <a class="waves-effect waves-light btn blue lighten-2" id="add-new-receiver-address"><i class="material-icons left">add</i> เพิ่มที่อยู่ผู้รับใหม่</a>
         </p>
       </div>
     </div>
+
+    <!-- ======== Select Sender Address ======== -->
+    <div class="card row hoverable sender-addresses-card" style="display:none;">
+      <div class="card-content">
+        <h5 class="no-margin-top">เลือกที่อยู่ <b>ผู้ส่ง</b></h5>
+        <!-- <p>เลือกที่อยู่ <b>ผู้รับ</b> ของจดหมาย</p> -->
+        <div class="all-sender-addresses">
+
+        </div>
+        <div class="clear"></div>
+        <p>
+          <a class="waves-effect waves-light btn blue lighten-2" id="add-new-sender-address"><i class="material-icons left">add</i> เพิ่มที่อยู่ผู้ส่งใหม่</a>
+        </p>
+      </div>
+    </div>
+
 
     <!-- ======== Submit Button ======== -->
     <div class="row submit-panel" style="display:none;">
@@ -111,11 +127,11 @@
   </div>
 
   <!-- Modal Structure -->
-  <div id="new-address-modal" class="modal">
+  <div id="new-receiver-address-modal" class="modal">
       <div class="modal-content">
-        <h5>เพิ่มที่อยู่ใหม่</h5>
-        {!! Form::open(array('url'=>'user/address/create','method'=>'POST', 'id'=>'new-address-form')) !!}
-        <form class="new-address-form" method="post">
+        <h5>เพิ่มที่อยู่ผู้รับใหม่</h5>
+        {!! Form::open(array('url'=>'user/address/create','method'=>'POST', 'id'=>'new-receiver-address-form')) !!}
+        <form class="new-receiver-address-form" method="post">
           <div class="row">
             <div class="input-field col s8">
               <input placeholder="ใส่ชื่อผู้รับ" id="name" name="name" type="text" class="validate">
@@ -138,7 +154,40 @@
               <label for="name">รหัสไปรษณีย์</label>
             </div>
           </div>
-          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn" id="submit-new-address">เพิ่มที่อยู่ใหม่</a>
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn" id="submit-new-receiver-address">เพิ่มที่อยู่ผู้รับใหม่</a>
+        {!! Form::close() !!}
+      </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="new-sender-address-modal" class="modal">
+      <div class="modal-content">
+        <h5>เพิ่มที่อยู่ผู้ส่งใหม่</h5>
+        {!! Form::open(array('url'=>'user/sender-address/create','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
+        <form class="new-sender-address-form" method="post">
+          <div class="row">
+            <div class="input-field col s8">
+              <input placeholder="ใส่ชื่อผู้รับ" id="name" name="name" type="text" class="validate">
+              <label for="name">ชื่อผู้รับ</label>
+            </div>
+            <div class="input-field col s12">
+              <input placeholder="ที่อยู่บรรทัดที่ 1" id="address_line_1" name="address_line_1" type="text" class="validate">
+              <label for="name">ที่อยู่บรรทัดที่ 1</label>
+            </div>
+            <div class="input-field col s12">
+              <input placeholder="ที่อยู่บรรทัดที่ 2" id="address_line_2" name="address_line_2" type="text" class="validate">
+              <label for="name">ที่อยู่บรรทัดที่ 2</label>
+            </div>
+            <div class="input-field col s12">
+              <input placeholder="ที่อยู่บรรทัดที่ 3" id="address_line_3" name="address_line_3" type="text" class="validate">
+              <label for="name">ที่อยู่บรรทัดที่ 3</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="รหัสไปรษณีย์" id="postcode" name="postcode" type="text" class="validate">
+              <label for="name">รหัสไปรษณีย์</label>
+            </div>
+          </div>
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn" id="submit-new-sender-address">เพิ่มที่อยู่ใหม่</a>
         {!! Form::close() !!}
       </div>
   </div>

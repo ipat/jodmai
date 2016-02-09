@@ -16,41 +16,7 @@
     </div>
   </div> -->
   <div class="col-sm-4">
-    <div class="row main-user-info">
-      <div class="col-md-4">
-        <div style="background-image:url({{Auth::user()->avatar}})" class="circle responsive-img z-depth-1 user-avatar"> </div>
-      </div>
-      <div class="col-md-8 left-align nopad valign-wrapper">
-        <p class="valign">
-          <span class="username">คุณ {{Auth::user()->name}}</span>
-          <br>
-          คุณมีเครดิต {{Auth::user()->credits}} points
-        </p>
-      </div>
-    </div>
-
-    <div class="row side-menu">
-        <a href="#main-manage"><i class="glyphicon glyphicon-th-list"></i>  <span> การจัดการหลัก</span></a>
-    </div>
-
-    <div class="row side-menu">
-        <a href="#anounce"><i class="glyphicon glyphicon-bullhorn"></i>  <span> ประชาสัมพันธ์</span></a>
-    </div>
-
-    <div class="row side-menu">
-        <a href="#anounce"><i class="glyphicon glyphicon glyphicon-bell"></i>  <span> แจ้งเตือนของคุณ</span></a>
-    </div>
-
-    <hr style="margin-right: 2.2em;">
-
-    <div class="row side-menu">
-        <a href="#announce"><i class="glyphicon glyphicon glyphicon-user"></i>  <span> จัดการบัญชี</span></a>
-    </div>
-
-    <div class="row side-menu">
-        <a href="#anounce"><i class="glyphicon glyphicon-log-out"></i>  <span> ออกจากระบบ</span></a>
-    </div>
-
+    @include('layouts.sidebar')
   </div>
 
   <div class="col-sm-8">
@@ -77,30 +43,58 @@
            <tr>
              <td>30 point</td>
              <td>30 บาท</td>
-             <td><a href="#">เติมเครดิต</a></td>
+             <td>
+                {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
+                  <input type="hidden" name="type" value="1">
+                  <button type="submit" class="waves-effect waves-light btn" name="button">เติมเครดิต</button>
+                {!! Form::close() !!}
+             </td>
            </tr>
            <tr>
              <td>50 point</td>
              <td>50 บาท</td>
-             <td><a href="#">เติมเครดิต</a></td>
+             <td>
+               {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
+                 <input type="hidden" name="type" value="2">
+                 <button type="submit" class="waves-effect waves-light btn" name="button">เติมเครดิต</button>
+               {!! Form::close() !!}
+             </td>
            </tr>
            <tr>
              <td>100 point</td>
              <td>95 บาท</td>
-             <td><a href="#">เติมเครดิต</a></td>
+             <td>
+               {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
+                 <input type="hidden" name="type" value="3">
+                 <button type="submit" class="waves-effect waves-light btn" name="button">เติมเครดิต</button>
+               {!! Form::close() !!}
+             </td>
            </tr>
            <tr>
              <td>200 point</td>
              <td>185 บาท</td>
-             <td><a href="#">เติมเครดิต</a></td>
+             <td>
+               {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
+                 <input type="hidden" name="type" value="4">
+                 <button type="submit" class="waves-effect waves-light btn" name="button">เติมเครดิต</button>
+               {!! Form::close() !!}
+             </td>
            </tr>
            <tr>
              <td>500 point</td>
              <td>450 บาท</td>
-             <td><a href="#">เติมเครดิต</a></td>
+             <td>
+               {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
+                 <input type="hidden" name="type" value="5">
+                 <button type="submit" class="waves-effect waves-light btn" name="button">เติมเครดิต</button>
+               {!! Form::close() !!}
+             </td>
            </tr>
          </tbody>
        </table>
+       <div class="center">
+<!-- PayPal Logo --><table border="0" cellpadding="10" cellspacing="0" align="center"><tr><td align="center">ใช้จ่ายผ่าน <a href="https://www.paypal.com/webapps/mpp/paypal-popup" title="How PayPal Works" onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" border="0" alt="PayPal Logo"></a></td></tr></table><!-- PayPal Logo -->
+       </div>
       </div>
     </div>
 
