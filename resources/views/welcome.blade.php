@@ -35,7 +35,7 @@
       <div class="carousel-inner">
         <div class="item active" style="background-image: url('{{url('images/slider/1.jpg')}}')">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig">Welcome to <span>Jodmai</span></h1>
+            <h1 class="animated fadeInLeftBig">Welcome to <span>jod-mai</span></h1>
             <p class="animated fadeInRightBig">Where your Mail matters most!</p>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
           </div>
@@ -70,25 +70,67 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">
-            <h1><img class="img-responsive" src="{{url('images/logo3.png')}}" alt="logo"></h1>
+          <a class="navbar-brand" href="#">
+            <h1 class="animated fadeInLeftBig"><span style="color:#fff">www.jod-mai.com</span></h1>
+            <!-- <h1><img class="img-responsive" src="{{url('images/logo3.png')}}" alt="logo"></h1> -->
           </a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="scroll active"><a href="#home">หน้าหลัก</a></li>
+            <li class="scroll"><a href="#twitter">โปรโมชั่น</a></li>
+            <li class="scroll"><a href="#login">เข้าสู่ระบบ</a></li>
             <li class="scroll"><a href="#services">บริการ</a></li>
             <!-- <li class="scroll"><a href="#about-us">เกี่ยวกับเรา</a></li> -->
-            <li class="scroll"><a href="#portfolio">พอร์ทโฟลิโอ</a></li>
-            <!-- <li class="scroll"><a href="#team">Team</a></li> -->
-            <li class="scroll"><a href="#login">เข้าสู่ระบบ</a></li>
+            <li class="scroll"><a href="#pricing">ราคา</a></li>
+            
+            
             <li class="scroll"><a href="#contact">ติดต่อเรา</a></li>
           </ul>
         </div>
       </div>
     </div><!--/#main-nav-->
   </header><!--/#home-->
-
+<section id="twitter" class="">
+    <div>
+      <a class="twitter-left-control" href="#twitter-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+      <a class="twitter-right-control" href="#twitter-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="twitter-icon text-center">
+              <i class="fa fa-user"></i>
+              <h4>โปรโมชั่น</h4>
+            </div>
+            <div id="twitter-carousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="item active wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                  <p>พิเศษ ใช้ code "jodmaifirsttime" ได้รับ 20 point ฟรี 100 ท่านแรกเท่านั้น<a href="#"><span>#www.jod-mai.com #ส่งจดหมายฟรี</span> http://www.jod-mai.com</a></p>
+                </div>
+                <div class="item">
+                  <p>ส่งจดหมายรักวันนี้ลุ้นรับตั๋วหนัง 2 ใบมูลค่า 400 บาทไปดูหนังกับแฟนฟรี <a href="#"><span>#www.jod-mai.com #ชวนสาวไปดูหนัง</span> http://www.jod-mai.com</a></p>
+                </div>
+                <!-- <div class="item">
+                  <p>Introducing Shortcode generator for Helix V2 based templates <a href="#"><span>#helixframework #joomla</span> http://www.jod-mai.com</a></p>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!--/#twitter-->
+  <section id="login" class="parallax">
+    <div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4 text-center">
+            <a href="auth/facebook"><p class="facebook-button">เข้าสู่ระบบผ่าน Facebook</p></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!--/#twitter-->
   <section id="services">
     <div class="container">
       <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
@@ -166,30 +208,33 @@
     <div class="container">
       <div class="row count">
         <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+          
+        </div>
+        <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
           <i class="fa fa-user"></i>
           <h3 class="timer">4000</h3>
-          <p>Happy Clients</p>
+          <p>user</p>
         </div>
-        <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+        <!-- <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
           <i class="fa fa-desktop"></i>
           <h3 class="timer">200</h3>
-          <p>Modern Websites</p>
+          <p>xx</p>
         </div>
         <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="700ms">
           <i class="fa fa-trophy"></i>
-          <h3 class="timer">10</h3>
-          <p>WINNING AWARDS</p>
-        </div>
+          <h3 class="timer">2</h3>
+          <p>Promotion</p>
+        </div> -->
         <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="900ms">
           <i class="fa fa-comment-o"></i>
           <h3>24/7</h3>
-          <p>Fast Support</p>
+          <p>letter sent</p>
         </div>
       </div>
     </div>
   </section><!--/#features-->
 
-  <section id="portfolio">
+<!--   <section id="portfolio">
     <div class="container">
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
@@ -374,28 +419,28 @@
       <div id="portfolio-single">
       </div>
     </div><!-- /#portfolio-single-wrap -->
-  </section><!--/#portfolio-->
+  </section><!--/#portfolio--> -->
 
   <section id="pricing">
     <div class="container">
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-          <h2>โปรโมชั่นของเรา</h2>
-          <p>ท่านสามารถเลือกชำระเงินแบบรายครั้ง หรือ  แบบเหมาจ่ายได้ นอกจากนี้ยัง การชำระเงินโดยรหัสของขวัญอีกด้วย =]</p>
+          <h2>การเติมเงิน และ ราคา</h2>
+          <p>ท่านสามารถเลือกเติมเงินจากระบบทรูมันนี่ บัตรเครดิต หรือ จากระบบ paypal ทั้งนี้อัตตราค่าส่งจดหมายรักจะอยู่ที่ 20 point โดยทีในซองจดหมายจะมีการ์ดและข้อความของท่าน</p>
         </div>
       </div>
       <div class="pricing-table">
         <div class="row">
           <div class="col-sm-3">
             <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-              <h3>รายครั้ง</h3>
+              <h3>ผ่านระบบทรูมันนี่</h3>
               <div class="price">
-                10<span>บาท</span>
+                50<span>บาท</span>
               </div>
               <ul>
-                <li>แสตมป์ 1 ดวง</li>
-                <li>ซองจดหมาย 1 ซอง</li>
-                <li>500 character 1 page</li>
+                
+                <li>ได้ 40 point</li>
+                
                 <li></li>
               </ul>
               <a href="#" class="btn btn-lg btn-primary">Sign up</a>
@@ -403,15 +448,13 @@
           </div>
           <div class="col-sm-3">
             <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
-              <h3>เหมาจ่าย 100</h3>
+              <h3>ผ่านบัตรเครดิต</h3>
               <div class="price">
-                <span>บาท</span>
+                20 <span>บาท</span>
               </div>
               <ul>
-                <li>แสตมป์ 11 ดวง</li>
-                <li>แลกการ์ดได้ 3 ดวงต่อ 1 ใบ</li>
-                <li>ซองจดหมาย 11 ซอง</li>
-                <li>500 character 10 page</li>
+                <li>ได้ 20 point</li>
+               
               </ul>
               <a href="#" class="btn btn-lg btn-primary">Sign up</a>
             </div>
@@ -420,28 +463,25 @@
             <div class="single-table featured wow flipInY" data-wow-duration="1000ms" data-wow-delay="800ms">
               <h3>Speacial Code</h3>
               <div class="price">
-                30<span>บาท</span>
+                0 <span>บาท</span>
               </div>
               <ul>
-                <li>การ์ดวันวาเลนไทน์ 1 ใบ</li>
-                <li>ซองจดหมาย 1 ซอง</li>
-                <li>แสตมป์ 1 ดวง</li>
-                <li>500 character</li>
+                <li>ได้รับ 20 point</li>
+                
               </ul>
               <a href="#" class="btn btn-lg btn-primary">Sign up</a>
             </div>
           </div>
           <div class="col-sm-3">
             <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">
-              <h3>Professional</h3>
+              <h3>ผ่านระบบ paypal</h3>
               <div class="price">
-                300<span>บาท</span>
+                20<span>บาท</span>
               </div>
               <ul>
-                <li>การ์ดวันวาเลนไทน์ 1 ใบ</li>
-                <li>ซองจดหมาย 33 ซอง</li>
-                <li>แสตมป์ 33 ดวง</li>
-                <li>500 character</li>
+                
+                <li>ได้ 20 point</li>
+                <!-- <li>500 character</li> -->
               </ul>
               <a href="#" class="btn btn-lg btn-primary">Sign up</a>
             </div>
@@ -451,48 +491,9 @@
     </div>
   </section><!--/#pricing-->
 
-  <section id="login" class="parallax">
-    <div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 col-md-offset-4 text-center">
-            <a href="auth/facebook"><p class="facebook-button">เข้าสู่ระบบผ่าน Facebook</p></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section><!--/#twitter-->
+  
 
-  <section id="twitter" class="">
-    <div>
-      <a class="twitter-left-control" href="#twitter-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-      <a class="twitter-right-control" href="#twitter-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 col-sm-offset-2">
-            <div class="twitter-icon text-center">
-              <i class="fa fa-twitter"></i>
-              <h4>Themeum</h4>
-            </div>
-            <div id="twitter-carousel" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="item active wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <p>Introducing Shortcode generator for Helix V2 based templates <a href="#"><span>#helixframework #joomla</span> http://bit.ly/1qlgwav</a></p>
-                </div>
-                <div class="item">
-                  <p>Introducing Shortcode generator for Helix V2 based templates <a href="#"><span>#helixframework #joomla</span> http://bit.ly/1qlgwav</a></p>
-                </div>
-                <div class="item">
-                  <p>Introducing Shortcode generator for Helix V2 based templates <a href="#"><span>#helixframework #joomla</span> http://bit.ly/1qlgwav</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section><!--/#twitter-->
-
+  
   <section id="contact">
     <div id="contact-us" class="parallax">
       <div class="container">
@@ -502,7 +503,7 @@
             <p>ทุกปัญหาที่ประสบเราจะรีบช่วยเหลือและแก้ไขโดยเร็ว ทุกคำติชมของท่านเราจะนำไปปรับปรุงผลงานของเราให้ดียิ่งขึ้น ขอขอบคุณทุกกำลังใจที่มีให้นะครับ =]</p>
           </div>
         </div>
-        <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+        <!-- <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
           <div class="row">
             <div class="col-sm-6">
               <form id="main-contact-form" name="contact-form" method="post" action="#">
@@ -528,15 +529,17 @@
                   <button type="submit" class="btn-submit">Send Now</button>
                 </div>
               </form>
-            </div>
+            </div> -->
             <div class="col-sm-6">
               <div class="contact-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <p>เราเป็นนิสิตที่อยากทำสิ่งใหม่ๆ เริ่มเดินในเส้นทางใหม่ๆ ที่เป็นของตัวเอง เราไม่อาจทราบได้ว่าอนาคตจะเป็นเช่นไร แต่เราก็จะทำมันให้เต็มที่ ช่วยเป็นกำลังใจให้พวกเราด้วยนะครับ =]</p>
                 <ul class="address">
                   <li><i class="fa fa-map-marker"></i> <span> Address:</span> 60/257 wangmai phatumwan bangkok praram1 road 10330 </li>
                   <li><i class="fa fa-phone"></i> <span> Phone:</span> +6696 857 4515  </li>
-                  <li><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:someone@yoursite.com"> eighty9degree@hotmil.com</a></li>
-                  <li><i class="fa fa-globe"></i> <span> Website:</span> <a href="#">www.jodmai.com</a></li>
+                  <li><i class="fa fa-facebook"></i> <span> Facebook:</span><a href="http://www.facebook.com/jodmai89">jodmai89</a></li>
+                  <li><i class="fa fa-line"></i> <span> line:</span>@www.jod-mai.com</li>
+                  <li><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:eighty9degree@hotmil.com"> eighty9degree@hotmil.com</a></li>
+                  <li><i class="fa fa-globe"></i> <span> Website:</span> <a href="#">www.jod-mai.com</a></li>
                 </ul>
               </div>
             </div>
@@ -556,7 +559,7 @@
             <!-- <li><a class="envelope" href="#"><i class="fa fa-envelope"></i></a></li> -->
             <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
             <!-- <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li> -->
-            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="facebook" href="https://www.facebook.com/jodmai89/"><i class="fa fa-facebook"></i></a></li>
             <!-- <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li> -->
             <!-- <li><a class="tumblr" href="#"><i class="fa fa-tumblr-square"></i></a></li> -->
           </ul>
