@@ -23,7 +23,12 @@
 
     <!-- =================== Announcement Cards =================== -->
     <h5>จดหมายของคุณ</h5>
-
+    @if(count($mails) == 0)
+      <p>
+        ว่างเปล่า! สร้างจดหมายใหม่ของคุณสิ <br>
+        <a href="{{url('mail/create')}}" class="btn blue lighten-2">สร้างจดหมายใหม่</a>
+      </p>
+    @endif
     @foreach ($mails as $mail)
       <div class="card row hoverable">
         <div class="card-content">

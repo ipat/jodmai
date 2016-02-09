@@ -30,5 +30,5 @@
 </div>
 
 <div class="row side-menu">
-    <a href="#anounce"><i class="glyphicon glyphicon-log-out"></i>  <span> ออกจากระบบ</span></a>
+    <a href="{{url('logout')}}"><i class="glyphicon glyphicon-log-out"></i>  <span> ออกจากระบบ</span></a>
 </div>

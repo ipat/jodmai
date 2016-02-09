@@ -37,7 +37,9 @@
     </div>
 
     <!-- =================== Announcement Cards =================== -->
-    <h5>ประชาสัมพันธ์</h5>
+    @if(count($blogs) != 0)
+      <h5>ประชาสัมพันธ์</h5>
+    @endif
 
     @foreach ($blogs as $blog)
       <div class="card medium row hoverable">
@@ -55,7 +57,9 @@
     @endforeach
 
     <!-- =================== Notification Cards =================== -->
-    <h5>แจ้งเตือนของคุณ</h5>
+    @if(count($recent_mails) != 0)
+      <h5>แจ้งเตือนของคุณ</h5>
+    @endif
 
     @foreach ($recent_mails as $mail)
       <div class="card row hoverable">

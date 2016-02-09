@@ -28,6 +28,7 @@ Route::get('blog/{id}', ['uses' => 'UserController@blogDetails', 'as' => 'blog-d
 Route::get('addCredit', ['uses' => 'UserController@addCredit', 'as' => 'add-credit']);
 Route::get('yourMail', ['uses' => 'UserController@yourMail', 'as' => 'your-mail']);
 Route::get('addCoupon', ['uses' => 'UserController@addCoupon', 'as' => 'add-coupon']);
+Route::get('logout', ['uses' => 'UserController@logout', 'as' => 'logout']);
 Route::post('addCoupon', ['uses' => 'UserController@handleAddCoupon', 'as' => 'handle-add-coupon']);
 
 // All routes about mail

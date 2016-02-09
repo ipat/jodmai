@@ -37,6 +37,12 @@ class UserController extends Controller {
         return view('user.blogDetails')->with('blog', $blog);
     }
 
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/');
+    }
+
     public function addCoupon()
     {
         return view('user.addCoupon');

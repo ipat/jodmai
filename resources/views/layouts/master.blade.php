@@ -23,7 +23,7 @@
         <li class="divider"></li>
         <!-- <li><a href="#!">two</a></li> -->
         <!-- <li class="divider"></li> -->
-        <li><a href="#!">ออกจากระบบ</a></li>
+        <li><a href="{{url('logout')}}">ออกจากระบบ</a></li>
       </ul>
       <nav class="blue lighten-2 navbar-fixed">
         <div class="nav-wrapper container">
