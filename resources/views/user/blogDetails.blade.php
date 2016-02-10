@@ -33,7 +33,7 @@
         {!!html_entity_decode($blog->details)!!}
       </div>
     </div>
-      <a class="waves-effect waves-light btn red" id="next-page" href="javascript:history.back()"><i class="material-icons left">fast_rewind</i> กลับ</a>
+      <a class="waves-effect waves-light btn red row" id="next-page" href="javascript:history.back()"><i class="material-icons left">fast_rewind</i> กลับ</a>
 
   </div>
 @endsection

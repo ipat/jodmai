@@ -61,17 +61,19 @@
       @yield('content')
     </div>
 
+    <footer class="page-footer blue lighten-1">
+      <div class="footer-copy left">
+        <div class="container">
+        © 2016 Copyright Jod-mai.com
+        </div>
+      </div>
+      <div class="footer-copy text-right right">
+        <div class="container">
+        สิทธิ์การใช้งาน
+        </div>
+      </div>
+    </footer>
+
   </body>
-  <footer class="page-footer blue lighten-1">
-    <div class="footer-copy left">
-      <div class="container">
-      © 2016 Copyright Jod-mai.com
-      </div>
-    </div>
-    <div class="footer-copy text-right right">
-      <div class="container">
-      สิทธิ์การใช้งาน
-      </div>
-    </div>
-  </footer>
+
 </html>
