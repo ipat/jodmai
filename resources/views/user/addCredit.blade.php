@@ -101,6 +101,9 @@
    <!-- PayPal Logo --><table border="0" cellpadding="10" cellspacing="0" align="center"><tr><td align="center"><img src="http://www2.truecorp.co.th/stocks/media/1374_090904140927.png" alt="" /></td></tr></table><!-- PayPal Logo -->
           </div>
           <div class="col s8">
+            <p>
+              เติมผ่าน TrueMoney จะได้รับอัตราส่วน 1.25 บาทต่อ 1 Point
+            </p>
             {!! Form::open(array('url'=>'truemoney','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
               <p><b>กรอกรหัส TrueMoney</b></p>
               <div class="input-field col s12">

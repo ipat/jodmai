@@ -182,10 +182,10 @@ class UserController extends Controller {
         $password = Request::get('password');
         $real_amount = Request::get('real_amount');
         $status = Request::get('status');
-        Log::info('TrueMoney ' . $password . ' - status ' . $status);
+        Log::info('TrueMoney ' . $password . ' - status ' . $status . ' - id ' . $transaction_id);
         $true_transaction = DB::table('truemoney')->where('password', $password)->where('called_back', false)->first();
         if(!$true_transaction){
-          return " ERROR|CARD_DOESNT_EXIST";
+          return "ERROR|CARD_DOESNT_EXIST";
         }
         if($status == 1) {
           $value = intval($real_amount * 0.8);
