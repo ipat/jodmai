@@ -157,7 +157,7 @@ class UserController extends Controller {
             'query' => [
                 'merchant_id' => 'ZY16021001',
                 'password' => $true_code ,
-                'resp_url' => "http://www.jod-mai.com/feedbackTruemoney"//url('feedbackTruemoney')
+                'resp_url' => "http://jod-mai.com/feedbackTruemoney"//url('feedbackTruemoney')
             ]
         ]);
         $result= $res->getBody()->getContents();
