@@ -97,65 +97,20 @@
       </div>
       <div class="footer-copy text-right right">
         <div class="container">
-        สิทธิ์การใช้งาน
+        <a href="{{url('rightOfUse')}}" style="color:white; text-decoration:none;">สิทธิ์การใช้งาน</a>
         </div>
       </div>
     </footer>
 
-    <script>
-      //The homestead or local host server (don't forget the ws prefix)
-      var host = 'ws://127.0.0.1';
-      var socket = null;
-      var input = document.getElementById('input');
-      var messages = document.getElementById('messages');
-      var print = function (message) {
-          var samp = document.createElement('samp');
-          samp.innerHTML = '\n' + message + '\n';
-          messages.appendChild(samp);
-          return;
-      };
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      //Manges the keyup event
-      input.addEventListener('keyup', function (evt) {
-          if (13 === evt.keyCode) {
-              var msg = input.value;
-              if (!msg)
-                  return;
-              try {
-                  //Send the message to the socket
-                  socket.send(msg);
-                  input.value = '';
-                  input.focus();
-              } catch (e) {
-                  console.log(e);
-              }
-                  print(msg);
-              return;
-          }
-      });
+    ga('create', 'UA-21666274-5', 'auto');
+    ga('send', 'pageview');
 
-      try {
-          socket = new WebSocket(host);
-
-          //Manages the open event within your client code
-          socket.onopen = function () {
-              print('Connection Opened');
-              input.focus();
-              return;
-          };
-          //Manages the message event within your client code
-          socket.onmessage = function (msg) {
-              print(msg.data);
-              return;
-          };
-          //Manages the close event within your client code
-          socket.onclose = function () {
-              print('Connection Closed');
-              return;
-          };
-      } catch (e) {
-          console.log(e);
-      }
   </script>
   </body>
 

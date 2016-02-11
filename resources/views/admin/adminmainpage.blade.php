@@ -26,7 +26,7 @@
         <i class="glyphicon glyphicon-plus icon"></i> <br>
         จัดการบล็อก
       </a>
-      <a class="col s6 hoverable" href="{{url('yourMail')}}">
+      <a class="col s6 hoverable" href="{{url('admin/mails')}}">
         <i class="glyphicon glyphicon-envelope icon"></i> <br>
         จัดการจดหมาย
       </a>

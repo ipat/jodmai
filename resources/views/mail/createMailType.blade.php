@@ -81,7 +81,8 @@
           <input type="hidden" name="sender_address_id" value="{{($sender_address)? $sender_address->id: 0}}">
           <textarea id="mailing" name="content" placeholder="เขียนจดหมายของท่านที่นี่"></textarea>
           <br>
-          <label><u>หมายเหตุ</u> ทาง Jodmai ขอสงวนสิทธิในการปรับแต่งรูปแบบข้อความให้มีความเหมาะสมกับจดหมายที่ทำการส่ง</label>
+          <label><u>คำแนะนำ</u> ไม่ควรเขียนเกิน 30 คำต่อหนึ่งแผ่น</label>
+          <label><u>หมายเหตุ</u> ทาง Jodmai ขอสงวนสิทธิ์ในการปรับแต่งรูปแบบข้อความให้มีความเหมาะสมกับจดหมายที่ทำการส่ง</label>
           <br>
           <button class="waves-effect waves-light btn blue lighten-2 modal-trigger" id="next-page" type="button" data-target="confirmModal"><i class="material-icons left">add</i> ดำเนินการต่อ >></button>
 

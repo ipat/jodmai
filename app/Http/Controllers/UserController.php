@@ -227,4 +227,9 @@ class UserController extends Controller {
 
     }
 
+    public function rightOfUse()
+    {
+        return view('user.rightOfUse');
+    }
+
 }

@@ -21,7 +21,7 @@
   <![endif]-->
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="images/favicon.ico">
+  <!-- <link rel="shortcut icon" href="images/favicon.ico"> -->
 </head><!--/head-->
 
 <body>
@@ -83,8 +83,8 @@
             <li class="scroll"><a href="#services">บริการ</a></li>
             <!-- <li class="scroll"><a href="#about-us">เกี่ยวกับเรา</a></li> -->
             <li class="scroll"><a href="#pricing">ราคา</a></li>
-            
-            
+
+
             <li class="scroll"><a href="#contact">ติดต่อเรา</a></li>
           </ul>
         </div>
@@ -127,7 +127,7 @@
           <div class="col-md-4 col-md-offset-4 text-center">
             <a href="auth/facebook"><p class="facebook-button">เข้าสู่ระบบผ่าน Facebook</p></a>
           </div>
-          
+
           <div class="col-md-4 col-md-offset-4 text-center">
             <a href="auth/facebook"><p class="facebook-button">สมัครผ่าน Facebook</p></a>
           </div>
@@ -212,7 +212,7 @@
     <div class="container">
       <div class="row count">
         <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
-          
+
         </div>
         <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
           <i class="fa fa-user"></i>
@@ -442,9 +442,9 @@
                 50<span>บาท</span>
               </div>
               <ul>
-                
+
                 <li>ได้ 40 point</li>
-                
+
                 <li></li>
               </ul>
               <a href="#login" class="btn btn-lg btn-primary">Sign up</a>
@@ -458,7 +458,7 @@
               </div>
               <ul>
                 <li>ได้ 20 point</li>
-               
+
               </ul>
               <a href="#login" class="btn btn-lg btn-primary">Sign up</a>
             </div>
@@ -471,7 +471,7 @@
               </div>
               <ul>
                 <li>ได้รับ 20 point</li>
-                
+
               </ul>
               <a href="#login" class="btn btn-lg btn-primary">Sign up</a>
             </div>
@@ -483,7 +483,7 @@
                 20<span>บาท</span>
               </div>
               <ul>
-                
+
                 <li>ได้ 20 point</li>
                 <!-- <li>500 character</li> -->
               </ul>
@@ -495,9 +495,9 @@
     </div>
   </section><!--/#pricing-->
 
-  
 
-  
+
+
   <section id="contact">
     <div id="contact-us" class="parallax">
       <div class="container">
