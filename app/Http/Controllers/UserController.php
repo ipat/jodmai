@@ -170,7 +170,7 @@ class UserController extends Controller {
           ));
           return redirect('home')->with("msg", "รอการตรวจสอบ TrueMoney สักครู่หากใช้งานได้จะทำการเพิ่ม Point ในระบบให้อัตโนมัติ");
         } else {
-          return var_dump($result);
+          // return var_dump($result);
           return redirect('home')->with("error", "เกิดข้อผิดพลาดไม่สามารถเติมบัตร TrueMoney ได้");
         }
     }
