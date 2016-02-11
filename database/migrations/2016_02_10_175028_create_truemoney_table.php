@@ -16,7 +16,7 @@ class CreateTruemoneyTable extends Migration
         Schema::create('truemoney', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->string('transaction_id');
+            $table->string('password');
             $table->boolean('called_back')->default(false);
             $table->timestamps();
         });

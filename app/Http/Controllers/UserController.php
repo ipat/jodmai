@@ -166,7 +166,7 @@ class UserController extends Controller {
         if($results[0] == "SUCCEED") {
           DB::table('truemoney')->insert(array(
             'user_id' => Auth::user()->id,
-            'transaction_id' => $results[1],
+            'password' => $true_code,
             'created_at' => Carbon::now()
           ));
           return redirect('home')->with("msg", "รอการตรวจสอบ TrueMoney สักครู่หากใช้งานได้จะทำการเพิ่ม Point ในระบบให้อัตโนมัติ");
@@ -182,8 +182,8 @@ class UserController extends Controller {
         $password = Request::get('password');
         $real_amount = Request::get('real_amount');
         $status = Request::get('status');
-        Log::info('TrueMoney ' . $transaction_id);
-        $true_transaction = DB::table('truemoney')->where('transaction_id', $transaction_id)->where('called_back', false)->first();
+        Log::info('TrueMoney ' . $password . ' - status ' . $status);
+        $true_transaction = DB::table('truemoney')->where('password', $password)->where('called_back', false)->first();
         if(!$true_transaction){
           return "Error";
         }
@@ -210,7 +210,7 @@ class UserController extends Controller {
 
         }
 
-        DB::table('truemoney')->where('transaction_id', $transaction_id)->update(array(
+        DB::table('truemoney')->where('password', $password)->update(array(
           'called_back' => true
         ));
 
