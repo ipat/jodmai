@@ -50,17 +50,17 @@ class IndexController extends Controller {
     //   $item_price = 30;
     // } else
     if($type == '2') {
-      $item_name = "50Points";
+      $item_name = "40Points";
       $item_price = 50;
     } else if($type == '3') {
-      $item_name = "100Points";
-      $item_price = 95;
+      $item_name = "75Points";
+      $item_price = 90;
     } else if($type == '4') {
-      $item_name = "200Points";
-      $item_price = 185;
+      $item_name = "125Points";
+      $item_price = 150;
     } else if($type == '5') {
-      $item_name = "500Points";
-      $item_price = 450;
+      $item_name = "255Points";
+      $item_price = 300;
     } else {
       return Redirect::route('home')
       ->with('error', 'เกิดปัญหาในการเติมเครดิตกรุณาลองใหม่อีกครั้ง');
@@ -166,17 +166,17 @@ class IndexController extends Controller {
       // if($item_purchase->name == '30Points') {
       //   $User->credits = $current_point + 30;
       // }
-      if($item_purchase->name == '50Points') {
-        $User->credits = $current_point + 50;
+      if($item_purchase->name == '40Points') {
+        $User->credits = $current_point + 40;
       }
-      if($item_purchase->name == '100Points') {
-        $User->credits = $current_point + 100;
+      if($item_purchase->name == '75Points') {
+        $User->credits = $current_point + 75;
       }
-      if($item_purchase->name == '200Points') {
-        $User->credits = $current_point + 200;
+      if($item_purchase->name == '125Points') {
+        $User->credits = $current_point + 125;
       }
-      if($item_purchase->name == '500Points') {
-        $User->credits = $current_point + 500;
+      if($item_purchase->name == '255Points') {
+        $User->credits = $current_point + 255;
       }
       $User->save();
       DB::table('transactions')->insert([

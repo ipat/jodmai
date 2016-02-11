@@ -100,12 +100,13 @@ $(document).ready(function() {
     }).done(function(data) {
       $(".all-sender-addresses").empty();
       console.log(data.length);
-      var content = '<div class="sender-address address hoverable" data-address-id="0">' +
-                    '  <div class="address-header">' +
-                    ' <big>ไม่ต้องการระบุที่อยู่ผู้ส่ง</big> ' +
-                    '  </div>' +
-                    '  <br> ' +
-                    '</div>';
+      var content = '';
+                    // '<div class="sender-address address hoverable" data-address-id="0">' +
+                    // '  <div class="address-header">' +
+                    // ' <big>ไม่ต้องการระบุที่อยู่ผู้ส่ง</big> ' +
+                    // '  </div>' +
+                    // '  <br> ' +
+                    // '</div>';
 
       $(".all-sender-addresses").append(content);
       //

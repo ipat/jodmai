@@ -45,7 +45,7 @@
 
          <tbody>
            <tr>
-             <td>50 point</td>
+             <td>40 point</td>
              <td>50 บาท</td>
              <td>
                {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
@@ -55,8 +55,8 @@
              </td>
            </tr>
            <tr>
-             <td>100 point</td>
-             <td>95 บาท</td>
+             <td>75 point</td>
+             <td>90 บาท</td>
              <td>
                {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
                  <input type="hidden" name="type" value="3">
@@ -65,8 +65,8 @@
              </td>
            </tr>
            <tr>
-             <td>200 point</td>
-             <td>185 บาท</td>
+             <td>125 point</td>
+             <td>150 บาท</td>
              <td>
                {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
                  <input type="hidden" name="type" value="4">
@@ -75,8 +75,8 @@
              </td>
            </tr>
            <tr>
-             <td>500 point</td>
-             <td>450 บาท</td>
+             <td>255 point</td>
+             <td>300 บาท</td>
              <td>
                {!! Form::open(array('url'=>'payment','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
                  <input type="hidden" name="type" value="5">
@@ -102,7 +102,7 @@
           </div>
           <div class="col s8">
             <p>
-              เติมผ่าน TrueMoney จะได้รับอัตราส่วน 1.25 บาทต่อ 1 Point
+              เติมผ่าน TrueMoney จะได้รับอัตราเช่นเดียวกับ Paypal ข้างต้น
             </p>
             {!! Form::open(array('url'=>'truemoney','method'=>'POST', 'id'=>'new-sender-address-form')) !!}
               <p><b>กรอกรหัส TrueMoney</b></p>

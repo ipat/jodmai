@@ -169,7 +169,7 @@ class UserController extends Controller {
             'password' => $true_code,
             'created_at' => Carbon::now()
           ));
-          return redirect('home')->with("msg", "รอการตรวจสอบ TrueMoney สักครู่หากใช้งานได้จะทำการเพิ่ม Point ในระบบให้อัตโนมัติ");
+          return redirect('home')->with("msg", "รอการตรวจสอบ TrueMoney สักครู่ลอง Refresh หน้าเว็บภายใน 1-5 นาทีเพื่อการแจ้งผลของระบบ");
         } else {
           // return var_dump($result);
           return redirect('home')->with("error", "เกิดข้อผิดพลาดไม่สามารถเติมบัตร TrueMoney ได้");
@@ -188,7 +188,16 @@ class UserController extends Controller {
           return "ERROR|CARD_DOESNT_EXIST";
         }
         if($status == 1) {
-          $value = intval($real_amount * 0.8);
+          if($real_amount == 50)
+            $value = 40;
+          else if($real_amount == 90)
+            $value = 75;
+          else if($real_amount == 150)
+            $value = 125;
+          else if($real_amount == 300)
+            $value = 255;
+          else
+            $value = intval($real_amount * 0.85);
           $User = User::find($true_transaction->user_id);
           $current_point = $User->credits;
           $User->credits = $current_point + $value;
