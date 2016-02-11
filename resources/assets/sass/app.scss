@@ -182,6 +182,10 @@ nav {
   }
 
   .choice-img {
+    img {
+      height: 50px;
+      width: auto;
+    }
   }
 
   .choice-header {
@@ -190,7 +194,7 @@ nav {
 
   .choice-description {
     font-size: 0.8em;
-    height: 30px;
+    height: 40px;
   }
 
 

@@ -30,6 +30,8 @@ Route::get('yourMail', ['uses' => 'UserController@yourMail', 'as' => 'your-mail'
 Route::get('addCoupon', ['uses' => 'UserController@addCoupon', 'as' => 'add-coupon']);
 Route::get('logout', ['uses' => 'UserController@logout', 'as' => 'logout']);
 Route::post('addCoupon', ['uses' => 'UserController@handleAddCoupon', 'as' => 'handle-add-coupon']);
+Route::post('truemoney', ['uses' => 'UserController@handleTruemoney', 'as' => 'handle-truemoney']);
+Route::post('feedbackTruemoney', ['uses' => 'UserController@feedbackTruemoney', 'as' => 'feedback-truemoney']);
 
 // All routes about mail
 Route::get('mail/details/{id}', ['uses' => 'MailController@mailDetails', 'as' => 'mail-details']);

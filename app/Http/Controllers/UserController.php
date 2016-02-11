@@ -8,6 +8,7 @@ use App\Mail;
 use Request;
 use App\Address;
 use Carbon\Carbon;
+use GuzzleHttp\Client;
 use App\User;
 
 class UserController extends Controller {
@@ -144,6 +145,42 @@ class UserController extends Controller {
     {
         $mails = Mail::where('user_id', Auth::user()->id)->orderBy('updated_at', 'DESC')->get();
         return view('user.yourMail')->with('mails', $mails);
+    }
+
+    public function handleTruemoney()
+    {
+        $true_code = Request::get("true_code");
+        $client = new Client();
+        $res = $client->request('GET', 'https://www.tmpay.net/TPG/backend.php', [
+            'query' => [
+                'merchant_id' => 'ZY16021001',
+                'password' => $true_code ,
+                'resp_url' => "http://www.jod-mai.com/feedbackTruemoney"//url('feedbackTruemoney')
+            ]
+        ]);
+        $result= $res->getBody()->getContents();
+        $results = explode("|", $result);
+        if($results[0] == "SUCCEED") {
+          DB::table('truemoney')->insert(array(
+            'user_id' => Auth::user()->id,
+            'transaction_id' => $results[1],
+            'created_at' => Carbon::now()
+          ));
+          return redirect('home')->with("msg", "รอการตรวจสอบ TrueMoney สักครู่หากใช้งานได้จะทำการเพิ่ม Point ในระบบให้อัตโนมัติ");
+        } else {
+          return var_dump($result);
+          return redirect('home')->with("error", "เกิดข้อผิดพลาดไม่สามารถเติมบัตร TrueMoney ได้");
+        }
+    }
+
+    public function feedbackTruemoney()
+    {
+        $transaction_id = Request::get('transaction_id');
+        $password = Request::get('password');
+        $real_amount = Request::get('real_amount');
+        $status = Request::get('status');
+
+
     }
 
 }

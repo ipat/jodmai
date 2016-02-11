@@ -194,6 +194,12 @@ nav a {
   }
 }
 
+.choice .choice-img img,
+.address .choice-img img {
+  height: 50px;
+  width: auto;
+}
+
 .choice .choice-header,
 .address .choice-header {
   font-size: 1.2em;
@@ -202,7 +208,7 @@ nav a {
 .choice .choice-description,
 .address .choice-description {
   font-size: 0.8em;
-  height: 30px;
+  height: 40px;
 }
 
 .address {
