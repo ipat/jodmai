@@ -45,10 +45,11 @@ class IndexController extends Controller {
     $item_name = "";
     $item_price = 0;
 
-    if($type == '1') {
-      $item_name = "30Points";
-      $item_price = 30;
-    } else if($type == '2') {
+    // if($type == '1') {
+    //   $item_name = "30Points";
+    //   $item_price = 30;
+    // } else
+    if($type == '2') {
       $item_name = "50Points";
       $item_price = 50;
     } else if($type == '3') {
@@ -162,9 +163,9 @@ class IndexController extends Controller {
       $User = User::find(Auth::user()->id);
       // return var_dump($User);
       $current_point = Auth::user()->credits;
-      if($item_purchase->name == '30Points') {
-        $User->credits = $current_point + 30;
-      }
+      // if($item_purchase->name == '30Points') {
+      //   $User->credits = $current_point + 30;
+      // }
       if($item_purchase->name == '50Points') {
         $User->credits = $current_point + 50;
       }

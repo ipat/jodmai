@@ -40,6 +40,32 @@
     @show
 
     <div class="container main-container">
+      <?php
+        $true_messages = DB::table('true_messages')->where('user_id', Auth::user()->id)->get();
+      ?>
+      <?php foreach ($true_messages as $msg): ?>
+        @if( $msg->type == "error" )
+          <div class="card-panel red lighten2 msg-box">
+            {{$msg->content}}
+            <div class="right">
+              X
+            </div>
+          </div>
+        @endif
+
+        @if( $msg->type == "msg" )
+          <div class="card-panel green msg-box">
+            {{$msg->content}}
+            <div class="right">
+              X
+            </div>
+          </div>
+        @endif
+      <?php endforeach; ?>
+      <?php
+        $true_messages = DB::table('true_messages')->where('user_id', Auth::user()->id)->delete();
+      ?>
+
       @if( session('error') )
         <div class="card-panel red lighten2 msg-box">
           {{session('error')}}

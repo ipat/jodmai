@@ -15,7 +15,9 @@ class UserController extends Controller {
 
     public function __construct()
     {
-       $this->middleware('auth');
+       $this->middleware('auth', ['except' => [
+            'feedbackTruemoney',
+        ]]);
     }
 
     /**
@@ -179,7 +181,38 @@ class UserController extends Controller {
         $password = Request::get('password');
         $real_amount = Request::get('real_amount');
         $status = Request::get('status');
+        $true_transaction = DB::table('truemoney')->where('transaction_id', $transaction_id)->where('called_back', false)->first();
+        if(!$true_transaction){
+          return "Error";
+        }
+        if($status == 1) {
+          $value = intval($real_amount * 0.8);
+          $User = User::find($true_transaction->user_id);
+          $current_point = $User->credits;
+          $User->credits = $current_point + $value;
+          $User->save();
 
+          DB::table('true_messages')->insert(array(
+            'user_id' => $true_transaction->user_id,
+            'content' => 'เติม Point ผ่าน TrueMoney ' . $value . ' Points สำเร็จ',
+            'type' => 'msg',
+          ));
+
+        } else {
+
+          DB::table('true_messages')->insert(array(
+            'user_id' => $true_transaction->user_id,
+            'content' => 'เติม Point ผ่าน TrueMoney ' . $value . ' ไม่สำเร็จ',
+            'type' => 'error',
+          ));
+
+        }
+
+        DB::table('truemoney')->where('transaction_id', $transaction_id)->update(array(
+          'called_back' => true
+        ));
+
+        return "OK";
 
     }
 
