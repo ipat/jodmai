@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Controller;
 use DB;
+use Log;
 use Auth;
 use Input;
 use App\Mail;
