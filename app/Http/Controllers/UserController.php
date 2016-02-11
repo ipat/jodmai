@@ -185,7 +185,7 @@ class UserController extends Controller {
         Log::info('TrueMoney ' . $password . ' - status ' . $status);
         $true_transaction = DB::table('truemoney')->where('password', $password)->where('called_back', false)->first();
         if(!$true_transaction){
-          return "Error";
+          return " ERROR|CARD_DOESNT_EXIST";
         }
         if($status == 1) {
           $value = intval($real_amount * 0.8);
@@ -214,7 +214,7 @@ class UserController extends Controller {
           'called_back' => true
         ));
 
-        return "OK";
+        return "SUCCEED|UID=10";
 
     }
 
