@@ -181,6 +181,7 @@ class UserController extends Controller {
         $password = Request::get('password');
         $real_amount = Request::get('real_amount');
         $status = Request::get('status');
+        Log::info('TrueMoney ' . $transaction_id);
         $true_transaction = DB::table('truemoney')->where('transaction_id', $transaction_id)->where('called_back', false)->first();
         if(!$true_transaction){
           return "Error";
