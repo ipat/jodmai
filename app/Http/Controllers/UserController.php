@@ -204,7 +204,7 @@ class UserController extends Controller {
 
           DB::table('true_messages')->insert(array(
             'user_id' => $true_transaction->user_id,
-            'content' => 'เติม Point ผ่าน TrueMoney ' . $value . ' ไม่สำเร็จ',
+            'content' => 'เติม Point ผ่าน TrueMoney ไม่สำเร็จ',
             'type' => 'error',
           ));
 
