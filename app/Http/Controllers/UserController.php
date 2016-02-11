@@ -92,14 +92,14 @@ class UserController extends Controller {
     public function getUserAddresses()
     {
         // $addresses = DB::table('addresses')->where('user_id', Auth::user()->id)->get();
-        $addresses = Address::where("is_sender", false)->get();
+        $addresses = Address::where("is_sender", false)->where("user_id", Auth::user()->id)->get();
         return response()->json($addresses);
     }
 
     public function getSenderAddresses()
     {
         // $addresses = DB::table('addresses')->where('user_id', Auth::user()->id)->get();
-        $addresses = Address::where("is_sender", true)->get();
+        $addresses = Address::where("is_sender", true)->where("user_id", Auth::user()->id)->get();
         return response()->json($addresses);
     }
 
