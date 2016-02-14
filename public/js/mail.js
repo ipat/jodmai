@@ -24,7 +24,7 @@ $(document).ready(function() {
                       '  <div class="choice-description">' +
                       mailType.description +
                       '  <br> ' +
-                      mailType.price + ' บาท' +
+                      mailType.price + ' Points' +
                       '  </div>' +
                       '</div>';
         $(".all-mail-types").append(content);

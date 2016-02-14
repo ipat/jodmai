@@ -182,15 +182,20 @@ nav {
   }
 
   .choice-img {
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .choice-header {
+    padding-top: 10px;
     font-size: 1.2em;
   }
 
   .choice-description {
     font-size: 0.8em;
-    height: 30px;
+    height: 50px;
   }
 
 
