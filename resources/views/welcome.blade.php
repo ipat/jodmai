@@ -454,10 +454,10 @@
             <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
               <h3>ผ่านบัตรเครดิต</h3>
               <div class="price">
-                20 <span>บาท</span>
+                50 <span>บาท</span>
               </div>
               <ul>
-                <li>ได้ 20 point</li>
+                <li>ได้ 40 point</li>
 
               </ul>
               <a href="#login" class="btn btn-lg btn-primary">Sign up</a>
@@ -480,11 +480,11 @@
             <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">
               <h3>ผ่านระบบ paypal</h3>
               <div class="price">
-                20<span>บาท</span>
+                50<span>บาท</span>
               </div>
               <ul>
 
-                <li>ได้ 20 point</li>
+                <li>ได้ 40 point</li>
                 <!-- <li>500 character</li> -->
               </ul>
               <a href="#login" class="btn btn-lg btn-primary">Sign up</a>
